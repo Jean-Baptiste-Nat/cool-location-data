@@ -1,0 +1,19 @@
+{
+  "name": "cool-location-data",
+  "stage": "incremental-country-rollout",
+  "updatedAt": "2026-07-06T04:58:38.756Z",
+  "nextTargets": [
+    "US",
+    "MX",
+    "FR",
+    "GB",
+    "DE"
+  ],
+  "source": {
+    "sourceDetected": true,
+    "sourcePath": "C:\\Users\\BabyLovaH\\Documents\\dev\\cool-location-data\\country-state-code-phone-data.js",
+    "countryCountApprox": 249,
+    "regionBucketApprox": 127
+  },
+  "status": "ok"
+}

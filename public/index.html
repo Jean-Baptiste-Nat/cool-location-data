@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cool Location Data</title>
+  <link id="dynamicFavicon" rel="icon" type="image/png" href="/public/assets/img/square.png">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600;700&display=swap");
+
+    :root {
+      --bg-1: #071d2b;
+      --bg-2: #10354a;
+      --bg-3: #17536a;
+      --text: #eef7fb;
+      --muted: #c0d9e5;
+      --glass: rgba(255, 255, 255, 0.1);
+      --stroke: rgba(255, 255, 255, 0.26);
+      --accent: #f6c85f;
+      --good: #7ddf9f;
+      --shadow: rgba(0, 0, 0, 0.25);
+    }
+
+    html[data-theme="light"] {
+      --bg-1: #e7f5ff;
+      --bg-2: #d2ebf9;
+      --bg-3: #bedef1;
+      --text: #0d2431;
+      --muted: #37515f;
+      --glass: rgba(255, 255, 255, 0.55);
+      --stroke: rgba(12, 36, 49, 0.2);
+      --accent: #d8721a;
+      --good: #1d8f5b;
+      --shadow: rgba(7, 29, 43, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Space Grotesk", sans-serif;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(4, 14, 24, 0.7), rgba(4, 14, 24, 0.7)),
+        var(--brand-bg-image, url("/public/assets/img/pays.jpg")),
+        radial-gradient(70rem 35rem at 10% -20%, var(--bg-3), transparent 70%),
+        radial-gradient(80rem 38rem at 100% 20%, var(--bg-2), transparent 70%),
+        linear-gradient(160deg, var(--bg-1), var(--bg-2));
+      background-size: cover, cover, auto, auto, auto;
+      background-position: center, center, center, center, center;
+      background-attachment: fixed, fixed, scroll, scroll, scroll;
+      overflow-x: hidden;
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,0.06) 0.6px, transparent 0.6px);
+      background-size: 4px 4px;
+      opacity: 0.3;
+    }
+
+    .container {
+      width: min(1100px, 92vw);
+      margin: 40px auto;
+      display: grid;
+      gap: 22px;
+    }
+
+    .panel {
+      background: var(--glass);
+      border: 1px solid var(--stroke);
+      border-radius: 22px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 45px var(--shadow);
+      padding: 24px;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero {
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero-logo {
+      width: min(520px, 92%);
+      height: auto;
+      display: block;
+      /* filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.4)); */
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      letter-spacing: 0.4px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+
+    p { margin: 0; color: var(--muted); line-height: 1.55; }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      border: 1px solid var(--stroke);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.84rem;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    a.button {
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-weight: 600;
+      transition: transform .2s ease, background .2s ease;
+    }
+
+    a.button:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    .button.primary {
+      background: linear-gradient(135deg, var(--accent), #f4a41c);
+      border-color: transparent;
+      color: #1d160a;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .tile {
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .tile h3 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+      font-family: "Sora", sans-serif;
+    }
+
+    .ok {
+      color: var(--good);
+      font-weight: 700;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      right: 18px;
+      top: 18px;
+      border: 1px solid var(--stroke);
+      background: var(--glass);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 10px 12px;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <button class="theme-toggle" id="themeToggle">Theme</button>
+
+  <main class="container">
+    <section class="panel hero">
+      <img data-brand-logo class="hero-logo" src="/public/assets/img/pays.png" alt="Cool Location Data">
+      <p>Base mondiale professionnelle pour shipping, taxes, paiements, checkout, recherche et geolocalisation. Architecture prete pour script tag, ES Modules, npm, API REST, Firebase Hosting, Functions et CDN.</p>
+      <div class="meta">
+        <span class="chip">Version: 1.0.0</span>
+        <span class="chip">Build: 2026.07.05-canada</span>
+        <span class="chip">Etape active: Canada</span>
+      </div>
+      <div class="actions">
+        <a class="button primary" href="./docs/index.html">Documentation complete</a>
+        <a class="button" href="./location-data.json">Dataset JSON</a>
+        <a class="button" href="./location-data.js">Bundle JS</a>
+        <a class="button" href="./location-data.min.js">Bundle minifie</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Etat de production</h2>
+      <div class="grid">
+        <article class="tile">
+          <h3>Architecture</h3>
+          <p class="ok">OK</p>
+          <p>Structure complete npm + Firebase + scripts + public assets.</p>
+        </article>
+        <article class="tile">
+          <h3>API REST</h3>
+          <p class="ok">OK</p>
+          <p>Routes /api/* preparees dans Firebase Functions.</p>
+        </article>
+        <article class="tile">
+          <h3>Data Stage</h3>
+          <p class="ok">Etape 2 active</p>
+          <p>Canada complet (pays, regions, metros, zones).</p>
+        </article>
+        <article class="tile">
+          <h3>Roadmap</h3>
+          <p>Etapes suivantes: US, MX, FR, GB, DE puis continents.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    async function applyBrandAssets() {
+      try {
+        const response = await fetch("/public/assets/img/manifest.json", { cache: "no-store" });
+        if (!response.ok) return;
+
+        const manifest = await response.json();
+        const images = Array.isArray(manifest.images) ? manifest.images : [];
+        const map = new Map(images.map((item) => [item.name, item.url]));
+
+        const logoUrl = map.get("pays.png") || map.get("square.png") || "/public/assets/img/pays.png";
+        const bgUrl = map.get("pays.jpg") || map.get("square.jpg") || logoUrl;
+        const iconUrl = map.get("square.png") || logoUrl;
+
+        document.documentElement.style.setProperty("--brand-bg-image", `url('${bgUrl}')`);
+        document.querySelectorAll("[data-brand-logo]").forEach((img) => {
+          img.src = logoUrl;
+        });
+
+        const favicon = document.getElementById("dynamicFavicon");
+        if (favicon) favicon.href = iconUrl;
+      } catch {
+        // Keep fallback static assets when manifest is unavailable.
+      }
+    }
+
+    applyBrandAssets();
+    setInterval(applyBrandAssets, 300000);
+
+    const key = "cld-theme";
+    const root = document.documentElement;
+    const saved = localStorage.getItem(key);
+    if (saved) root.setAttribute("data-theme", saved);
+
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem(key, next);
+    });
+  </script>
+</body>
+</html>

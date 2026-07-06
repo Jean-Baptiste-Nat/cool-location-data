@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-07-06T04:30:24.087Z",
+  "total": 4,
+  "images": [
+    {
+      "name": "pays.jpg",
+      "url": "/public/assets/img/pays.jpg"
+    },
+    {
+      "name": "pays.png",
+      "url": "/public/assets/img/pays.png"
+    },
+    {
+      "name": "square.jpg",
+      "url": "/public/assets/img/square.jpg"
+    },
+    {
+      "name": "square.png",
+      "url": "/public/assets/img/square.png"
+    }
+  ]
+}

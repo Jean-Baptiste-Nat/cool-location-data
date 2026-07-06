@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cool Location Data - Documentation</title>
+    <link id="dynamicFavicon" rel="icon" type="image/png" href="/public/assets/img/square.png">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;700&display=swap");
+
+        :root {
+            --bgA: #081822;
+            --bgB: #0f3344;
+            --surface: rgba(255, 255, 255, 0.08);
+            --surface2: rgba(255, 255, 255, 0.05);
+            --line: rgba(255, 255, 255, 0.18);
+            --text: #ecf6fb;
+            --muted: #bad1de;
+            --accent: #f6c85f;
+            --shadow: rgba(0, 0, 0, 0.28);
+        }
+
+        html[data-theme="light"] {
+            --bgA: #eff7fb;
+            --bgB: #dceef7;
+            --surface: rgba(255, 255, 255, 0.62);
+            --surface2: rgba(255, 255, 255, 0.5);
+            --line: rgba(8, 24, 34, 0.16);
+            --text: #0e2838;
+            --muted: #3a5768;
+            --accent: #d77a1b;
+            --shadow: rgba(12, 36, 50, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+        }
+
+        body {
+            font-family: "Space Grotesk", sans-serif;
+            color: var(--text);
+            background:
+                linear-gradient(rgba(4, 14, 24, 0.72), rgba(4, 14, 24, 0.72)),
+                var(--brand-bg-image, url("/assets/img/pays.jpg")),
+                radial-gradient(60rem 30rem at -20% -10%, #1a607a, transparent 70%),
+                radial-gradient(64rem 32rem at 110% 10%, #15465d, transparent 70%),
+                linear-gradient(135deg, var(--bgA), var(--bgB));
+            background-size: cover, cover, auto, auto, auto;
+            background-position: center, center, center, center, center;
+            background-attachment: fixed, fixed, scroll, scroll, scroll;
+            min-height: 100vh;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            border-right: 1px solid var(--line);
+            background: var(--surface2);
+            backdrop-filter: blur(12px);
+            padding: 18px;
+            overflow: auto;
+        }
+
+        .brand {
+            font-family: "Sora", sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+        }
+
+        .brand img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+        }
+
+        .search {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            padding: 10px;
+            outline: none;
+            margin-bottom: 14px;
+        }
+
+        .menu a {
+            display: block;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 8px;
+            margin-bottom: 4px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .content {
+            padding: 24px;
+            display: grid;
+            gap: 16px;
+        }
+
+        section {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 18px 36px var(--shadow);
+            padding: 18px;
+            animation: show 0.45s ease both;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Sora", sans-serif;
+            margin: 0 0 10px;
+        }
+
+        h1 {
+            font-size: clamp(1.4rem, 3.3vw, 2.2rem);
+        }
+
+        p {
+            margin: 0 0 8px;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        pre {
+            margin: 10px 0 0;
+            padding: 42px 12px 12px;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: rgba(0, 0, 0, 0.24);
+            color: #def7ff;
+            overflow: auto;
+            font-size: 0.84rem;
+            position: relative;
+        }
+
+        .code-copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            border-radius: 8px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 5px 8px;
+            cursor: pointer;
+            transition: transform .15s ease, background .2s ease, color .2s ease;
+        }
+
+        .code-copy-btn:hover {
+            transform: translateY(-1px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .code-copy-btn.copied {
+            background: rgba(125, 223, 159, 0.18);
+            color: #d4ffe1;
+            border-color: rgba(125, 223, 159, 0.6);
+            transform: scale(1.04);
+        }
+
+        .playground {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+
+        .playground label {
+            display: grid;
+            gap: 6px;
+            color: var(--muted);
+            font-size: 0.86rem;
+        }
+
+        .playground input,
+        .playground textarea {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 10px;
+            font: inherit;
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.08);
+            outline: none;
+        }
+
+        .playground textarea {
+            min-height: 88px;
+            resize: vertical;
+            grid-column: 1 / -1;
+        }
+
+        html[data-theme="light"] pre {
+            background: rgba(255, 255, 255, 0.55);
+            color: #153040;
+        }
+
+        .chip {
+            display: inline-block;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 0.82rem;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+
+        .toggle {
+            position: fixed;
+            right: 16px;
+            top: 14px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 8px 10px;
+            background: var(--surface);
+            color: var(--text);
+            cursor: pointer;
+            z-index: 99;
+        }
+
+        @media (max-width: 980px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                height: auto;
+            }
+        }
+
+        @keyframes show {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="toggle" id="toggleTheme">Theme</button>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="brand"><img data-brand-logo src="/public/assets/img/pays.png" alt="Cool Location Data"></div>
+            <input class="search" id="searchNav" placeholder="Rechercher une section">
+            <nav class="menu" id="menu">
+                <a href="#installation">Installation</a>
+                <a href="#usage">Utilisation</a>
+                <a href="#playground">Test Temps Reel</a>
+                <a href="#api">API REST</a>
+                <a href="#helpers">Helpers</a>
+                <a href="#shipping">Shipping & Taxes</a>
+                <a href="#stripe">Stripe & Checkout</a>
+                <a href="#firebase">Firebase</a>
+                <a href="#frameworks">Frameworks</a>
+                <a href="#examples">Exemples</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section id="installation">
+                <h1>Installation</h1>
+                <p>Supporte script tag, ES Modules, npm package, CDN et API REST Firebase.</p>
+                <pre><code>npm install cool-location-data</code></pre>
+                <pre><code>&lt;script src="https://cool-location-data.web.app/location-data.js"&gt;&lt;/script&gt;</code></pre>
+            </section>
+
+            <section id="usage">
+                <h2>Utilisation</h2>
+                <span class="chip">window.CoolLocationData</span>
+                <span class="chip">ESM import</span>
+                <span class="chip">Node.js compatible</span>
+                <pre><code>import { getCountryData, getRegion, getShippingZone } from "cool-location-data";
+
+const country = getCountryData("CA");
+const region = getRegion("CA", "CA-QC");
+const shipping = getShippingZone("CA", "CA-QC");</code></pre>
+            </section>
+
+            <section id="playground">
+                <h2>Test Temps Reel</h2>
+                <p>Change les champs pour tester les helpers et afficher le resultat JSON en direct.</p>
+                <form class="playground" id="liveTestForm" autocomplete="off">
+                    <label>
+                        Country Code/Name
+                        <input id="countryInput" type="text" value="CA" placeholder="CA ou Canada">
+                    </label>
+                    <label>
+                        Region Code/Name
+                        <input id="regionInput" type="text" value="QC" placeholder="QC ou Quebec">
+                    </label>
+                    <label>
+                        Search Query
+                        <input id="searchInput" type="text" value="montreal" placeholder="City/Country/Region">
+                    </label>
+                    <label>
+                        Notes (non execute, juste memo live)
+                        <textarea id="notesInput" placeholder="Ex: test checkout Stripe pour CA-QC"></textarea>
+                    </label>
+                </form>
+                <pre><code id="playgroundOutput">Chargement...</code></pre>
+            </section>
+
+            <section id="api">
+                <h2>API REST</h2>
+                <p>Routes disponibles:</p>
+                <pre><code>GET /api/countries
+GET /api/countries/:country
+GET /api/countries/:country/regions
+GET /api/countries/:country/regions/:region
+GET /api/countries/:country/metro
+GET /api/search?q=montreal
+GET /api/languages
+GET /api/currencies
+GET /api/shipping
+GET /api/taxes
+GET /api/timezones
+GET /api/flags
+GET /api/version</code></pre>
+            </section>
+
+            <section id="helpers">
+                <h2>Helpers JavaScript</h2>
+                <p>Helpers implementes: getAllCountries, getCountryData, getCountryName, getCountryFlag,
+                    getCountryCurrency, getCountryLanguages, getCountryPhoneCode, getCountryTimezones,
+                    getCountryCapital, getRegions, getRegion, getRegionName, getRegionCode, getMetroAreas,
+                    getShippingZone, getTaxZone, getDistanceBetweenRegions, searchCountry, searchRegion, searchCity.</p>
+            </section>
+
+            <section id="shipping">
+                <h2>Shipping, taxes et zones</h2>
+                <p>Chaque pays/region embarque shippingZone, taxZone/taxRegion, timezone, langue principale et metriques
+                    logistiques pour e-commerce, multi-store et marketplace.</p>
+            </section>
+
+            <section id="stripe">
+                <h2>Stripe, paiements et checkout</h2>
+                <p>Le mapping country/region/currency/langues facilite la normalisation des adresses, le choix de
+                    devise, la fiscalite et la coherence du tunnel de paiement.</p>
+            </section>
+
+            <section id="firebase">
+                <h2>Firebase Hosting et Functions</h2>
+                <pre><code>firebase.json configure:
+- Hosting public: /public
+- Rewrite /api/** vers function api
+- Function Express prete pour extension</code></pre>
+            </section>
+
+            <section id="frameworks">
+                <h2>React, Angular, Vue, Flutter Web, Express, Vanilla</h2>
+                <p>Utilisable partout via import ESM ou fetch API. Aucun lock framework.</p>
+            </section>
+
+            <section id="examples">
+                <h2>Exemples rapides</h2>
+                <pre><code>const country = getCountryData("CA");
+const region = getRegion("CA", "QC");
+const shipping = getShippingZone("CA", "QC");
+const currency = getCountryCurrency("CA");</code></pre>
+            </section>
+        </main>
+    </div>
+
+    <script src="/location-data.js"></script>
+    <script>
+        async function applyBrandAssets() {
+            try {
+                const response = await fetch("/public/assets/img/manifest.json", { cache: "no-store" });
+                if (!response.ok) return;
+
+                const manifest = await response.json();
+                const images = Array.isArray(manifest.images) ? manifest.images : [];
+                const map = new Map(images.map((item) => [item.name, item.url]));
+
+                const logoUrl = map.get("pays.png") || map.get("square.png") || "/public/assets/img/pays.png";
+                const bgUrl = map.get("pays.jpg") || map.get("square.jpg") || logoUrl;
+                const iconUrl = map.get("square.png") || logoUrl;
+
+                document.documentElement.style.setProperty("--brand-bg-image", `url('${bgUrl}')`);
+                document.querySelectorAll("[data-brand-logo]").forEach((img) => {
+                    img.src = logoUrl;
+                });
+
+                const favicon = document.getElementById("dynamicFavicon");
+                if (favicon) favicon.href = iconUrl;
+            } catch {
+                // Keep fallback static assets when manifest is unavailable.
+            }
+        }
+
+        applyBrandAssets();
+        setInterval(applyBrandAssets, 300000);
+
+        function installCopyButtons() {
+            document.querySelectorAll("pre").forEach((pre) => {
+                if (pre.querySelector(".code-copy-btn")) return;
+
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = "code-copy-btn";
+                button.textContent = "Copier";
+
+                button.addEventListener("click", async () => {
+                    const code = pre.querySelector("code");
+                    const text = code ? code.textContent : pre.textContent;
+
+                    try {
+                        await navigator.clipboard.writeText(text || "");
+                        button.textContent = "Copie";
+                        button.classList.add("copied");
+                        setTimeout(() => {
+                            button.textContent = "Copier";
+                            button.classList.remove("copied");
+                        }, 850);
+                    } catch {
+                        button.textContent = "Erreur";
+                        setTimeout(() => {
+                            button.textContent = "Copier";
+                        }, 850);
+                    }
+                });
+
+                pre.appendChild(button);
+            });
+        }
+
+        function resolveApi() {
+            return window.CoolLocationData || null;
+        }
+
+        function liveTestRender() {
+            const output = document.getElementById("playgroundOutput");
+            if (!output) return;
+
+            const api = resolveApi();
+            if (!api) {
+                output.textContent = JSON.stringify({
+                    error: "CoolLocationData non charge. Verifier /location-data.js"
+                }, null, 2);
+                return;
+            }
+
+            const countryValue = document.getElementById("countryInput").value;
+            const regionValue = document.getElementById("regionInput").value;
+            const searchValue = document.getElementById("searchInput").value;
+            const notesValue = document.getElementById("notesInput").value;
+
+            const payload = {
+                generatedAt: new Date().toISOString(),
+                input: {
+                    country: countryValue,
+                    region: regionValue,
+                    search: searchValue,
+                    notes: notesValue
+                },
+                version: api.getApiVersion ? api.getApiVersion() : null,
+                countryData: api.getCountryData ? api.getCountryData(countryValue) : null,
+                regionData: api.getRegion ? api.getRegion(countryValue, regionValue) : null,
+                shippingZone: api.getShippingZone ? api.getShippingZone(countryValue, regionValue) : null,
+                taxZone: api.getTaxZone ? api.getTaxZone(countryValue, regionValue) : null,
+                searchCountry: api.searchCountry ? api.searchCountry(searchValue) : [],
+                searchRegion: api.searchRegion ? api.searchRegion(searchValue, countryValue) : [],
+                searchCity: api.searchCity ? api.searchCity(searchValue) : []
+            };
+
+            output.textContent = JSON.stringify(payload, null, 2);
+        }
+
+        let liveTimer = null;
+        function bindLiveForm() {
+            const form = document.getElementById("liveTestForm");
+            if (!form) return;
+
+            const schedule = () => {
+                clearTimeout(liveTimer);
+                liveTimer = setTimeout(liveTestRender, 120);
+            };
+
+            form.querySelectorAll("input, textarea").forEach((field) => {
+                field.addEventListener("input", schedule);
+            });
+
+            liveTestRender();
+        }
+
+        installCopyButtons();
+        bindLiveForm();
+
+        const root = document.documentElement;
+        const key = "cld-doc-theme";
+        const saved = localStorage.getItem(key);
+        if (saved) root.setAttribute("data-theme", saved);
+
+        document.getElementById("toggleTheme").addEventListener("click", () => {
+            const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+            root.setAttribute("data-theme", next);
+            localStorage.setItem(key, next);
+        });
+
+        const links = Array.from(document.querySelectorAll("#menu a"));
+        const input = document.getElementById("searchNav");
+
+        input.addEventListener("input", () => {
+            const q = input.value.trim().toLowerCase();
+            links.forEach((link) => {
+                const visible = link.textContent.toLowerCase().includes(q);
+                link.style.display = visible ? "block" : "none";
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    links.forEach((link) => link.classList.remove("active"));
+                    const active = links.find((link) => link.getAttribute("href") === `#${entry.target.id}`);
+                    if (active) active.classList.add("active");
+                }
+            });
+        }, { threshold: 0.25 });
+
+        document.querySelectorAll("main section").forEach((section) => observer.observe(section));
+    </script>
+</body>
+
+</html>
