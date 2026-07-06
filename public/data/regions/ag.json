@@ -1,0 +1,26 @@
+[
+  {
+    "code": "AG-ANT",
+    "name": "Antigua and Barbuda",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/ag-ant.png",
+    "flagEmoji": "AG",
+    "languages": [
+      "eng"
+    ],
+    "primaryLanguage": "eng",
+    "shippingZone": "GL-AG",
+    "taxRegion": "GL-AG",
+    "geographicalRegion": "Americas",
+    "latitude": 17.05,
+    "longitude": -61.8,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  }
+]

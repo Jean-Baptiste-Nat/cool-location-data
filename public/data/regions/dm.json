@@ -1,0 +1,26 @@
+[
+  {
+    "code": "DM-DOM",
+    "name": "Dominica",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/dm-dom.png",
+    "flagEmoji": "DM",
+    "languages": [
+      "eng"
+    ],
+    "primaryLanguage": "eng",
+    "shippingZone": "GL-DM",
+    "taxRegion": "GL-DM",
+    "geographicalRegion": "Americas",
+    "latitude": 15.41666666,
+    "longitude": -61.33333333,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  }
+]

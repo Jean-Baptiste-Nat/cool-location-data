@@ -1,0 +1,26 @@
+[
+  {
+    "code": "BB-BAR",
+    "name": "Barbados",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/bb-bar.png",
+    "flagEmoji": "BB",
+    "languages": [
+      "eng"
+    ],
+    "primaryLanguage": "eng",
+    "shippingZone": "GL-BB",
+    "taxRegion": "GL-BB",
+    "geographicalRegion": "Americas",
+    "latitude": 13.16666666,
+    "longitude": -59.53333333,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "countryCode": "DE",
+    "regionCode": "DE-BAY",
+    "code": "MUC",
+    "name": "Munich Metro",
+    "cities": [
+      "Munich",
+      "Augsburg",
+      "Regensburg"
+    ],
+    "center": "Munich",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "DE",
+    "regionCode": "DE-BER",
+    "code": "BER",
+    "name": "Berlin Metro",
+    "cities": [
+      "Berlin",
+      "Potsdam"
+    ],
+    "center": "Berlin",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "DE",
+    "regionCode": "DE-HAM",
+    "code": "HAM",
+    "name": "Hamburg Metro",
+    "cities": [
+      "Hamburg",
+      "Norderstedt"
+    ],
+    "center": "Hamburg",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "DE",
+    "regionCode": "DE-HES",
+    "code": "FRA",
+    "name": "Frankfurt Rhine-Main",
+    "cities": [
+      "Frankfurt",
+      "Wiesbaden",
+      "Mainz"
+    ],
+    "center": "Frankfurt",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "DE",
+    "regionCode": "DE-NOR",
+    "code": "CGN",
+    "name": "Rhine-Ruhr",
+    "cities": [
+      "Cologne",
+      "Düsseldorf",
+      "Dortmund"
+    ],
+    "center": "Cologne",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0
+  }
+]

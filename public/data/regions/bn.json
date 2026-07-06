@@ -1,0 +1,98 @@
+[
+  {
+    "code": "BN-BEL",
+    "name": "Belait",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/bn-bel.png",
+    "flagEmoji": "BN",
+    "languages": [
+      "msa"
+    ],
+    "primaryLanguage": "msa",
+    "shippingZone": "AS-BN",
+    "taxRegion": "AS-BN",
+    "geographicalRegion": "Asia",
+    "latitude": 4.5,
+    "longitude": 114.66666666,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "BN-BRU",
+    "name": "Brunei-Muara",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/bn-bru.png",
+    "flagEmoji": "BN",
+    "languages": [
+      "msa"
+    ],
+    "primaryLanguage": "msa",
+    "shippingZone": "AS-BN",
+    "taxRegion": "AS-BN",
+    "geographicalRegion": "Asia",
+    "latitude": 4.5,
+    "longitude": 114.66666666,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "BN-TEM",
+    "name": "Temburong",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/bn-tem.png",
+    "flagEmoji": "BN",
+    "languages": [
+      "msa"
+    ],
+    "primaryLanguage": "msa",
+    "shippingZone": "AS-BN",
+    "taxRegion": "AS-BN",
+    "geographicalRegion": "Asia",
+    "latitude": 4.5,
+    "longitude": 114.66666666,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "BN-TUT",
+    "name": "Tutong",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/bn-tut.png",
+    "flagEmoji": "BN",
+    "languages": [
+      "msa"
+    ],
+    "primaryLanguage": "msa",
+    "shippingZone": "AS-BN",
+    "taxRegion": "AS-BN",
+    "geographicalRegion": "Asia",
+    "latitude": 4.5,
+    "longitude": 114.66666666,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  }
+]

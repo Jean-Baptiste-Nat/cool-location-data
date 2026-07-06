@@ -1,0 +1,117 @@
+[
+  {
+    "countryCode": "CA",
+    "regionCode": "CA-AB",
+    "code": "YYC",
+    "name": "Calgary Metro",
+    "cities": [
+      "Calgary",
+      "Airdrie",
+      "Okotoks"
+    ],
+    "center": "Calgary",
+    "latitude": 60,
+    "longitude": -95,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "CA",
+    "regionCode": "CA-AB",
+    "code": "YEG",
+    "name": "Edmonton Metro",
+    "cities": [
+      "Edmonton",
+      "St. Albert",
+      "Sherwood Park"
+    ],
+    "center": "Edmonton",
+    "latitude": 60,
+    "longitude": -95,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "CA",
+    "regionCode": "CA-BC",
+    "code": "YVR",
+    "name": "Metro Vancouver",
+    "cities": [
+      "Vancouver",
+      "Burnaby",
+      "Surrey",
+      "Richmond"
+    ],
+    "center": "Vancouver",
+    "latitude": 60,
+    "longitude": -95,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "CA",
+    "regionCode": "CA-NS",
+    "code": "YHZ",
+    "name": "Halifax Metro",
+    "cities": [
+      "Halifax",
+      "Dartmouth",
+      "Bedford"
+    ],
+    "center": "Halifax",
+    "latitude": 60,
+    "longitude": -95,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "CA",
+    "regionCode": "CA-ON",
+    "code": "YTO",
+    "name": "Greater Toronto Area",
+    "cities": [
+      "Toronto",
+      "Mississauga",
+      "Brampton",
+      "Markham",
+      "Vaughan"
+    ],
+    "center": "Toronto",
+    "latitude": 60,
+    "longitude": -95,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "CA",
+    "regionCode": "CA-ON",
+    "code": "YOW",
+    "name": "Ottawa-Gatineau",
+    "cities": [
+      "Ottawa",
+      "Gatineau"
+    ],
+    "center": "Ottawa",
+    "latitude": 60,
+    "longitude": -95,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "CA",
+    "regionCode": "CA-QC",
+    "code": "YMQ",
+    "name": "Grand Montréal",
+    "cities": [
+      "Montréal",
+      "Laval",
+      "Longueuil",
+      "Brossard"
+    ],
+    "center": "Montréal",
+    "latitude": 60,
+    "longitude": -95,
+    "radius": 40,
+    "population": 0
+  }
+]

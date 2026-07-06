@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Cool Location Data</title>
-  <link id="dynamicFavicon" rel="icon" type="image/png" href="/public/assets/img/square.png">
+  <link id="dynamicFavicon" rel="icon" type="image/png" href="/public/assets/img/square.jpg">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@400;600;700&display=swap");
 
@@ -43,7 +43,7 @@
       min-height: 100vh;
       background:
         linear-gradient(rgba(4, 14, 24, 0.7), rgba(4, 14, 24, 0.7)),
-        var(--brand-bg-image, url("/public/assets/img/pays.jpg")),
+        var(--brand-bg-image, url("/assets/img/pays.jpg")),
         radial-gradient(70rem 35rem at 10% -20%, var(--bg-3), transparent 70%),
         radial-gradient(80rem 38rem at 100% 20%, var(--bg-2), transparent 70%),
         linear-gradient(160deg, var(--bg-1), var(--bg-2));
@@ -88,7 +88,6 @@
       width: min(520px, 92%);
       height: auto;
       display: block;
-      /* filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.4)); */
     }
 
     h1 {
@@ -196,7 +195,7 @@
       <div class="meta">
         <span class="chip">Version: 1.0.0</span>
         <span class="chip">Build: 2026.07.05-canada</span>
-        <span class="chip">Etape active: Canada</span>
+        <span class="chip">Etape active: Monde + Canada enrichi</span>
       </div>
       <div class="actions">
         <a class="button primary" href="./docs/index.html">Documentation complete</a>
@@ -212,21 +211,21 @@
         <article class="tile">
           <h3>Architecture</h3>
           <p class="ok">OK</p>
-          <p>Structure complete npm + Firebase + scripts + public assets.</p>
+          <p>Structure complete npm + Firebase + public assets.</p>
         </article>
         <article class="tile">
           <h3>API REST</h3>
           <p class="ok">OK</p>
-          <p>Routes /api/* preparees dans Firebase Functions.</p>
+          <p>Routes /api/* publiees via Firebase Functions.</p>
         </article>
         <article class="tile">
           <h3>Data Stage</h3>
-          <p class="ok">Etape 2 active</p>
-          <p>Canada complet (pays, regions, metros, zones).</p>
+          <p class="ok">Monde en ligne</p>
+          <p>250 pays, regions live, metros et helpers exploitable en production.</p>
         </article>
         <article class="tile">
           <h3>Roadmap</h3>
-          <p>Etapes suivantes: US, MX, FR, GB, DE puis continents.</p>
+          <p>Raffinement pays par pays: US, MX, FR, GB, DE puis continents.</p>
         </article>
       </div>
     </section>

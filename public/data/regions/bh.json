@@ -1,0 +1,98 @@
+[
+  {
+    "code": "BH-CAP",
+    "name": "Capital",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/bh-cap.png",
+    "flagEmoji": "BH",
+    "languages": [
+      "ara"
+    ],
+    "primaryLanguage": "ara",
+    "shippingZone": "AS-BH",
+    "taxRegion": "AS-BH",
+    "geographicalRegion": "Asia",
+    "latitude": 26,
+    "longitude": 50.55,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "BH-MUH",
+    "name": "Muharraq",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/bh-muh.png",
+    "flagEmoji": "BH",
+    "languages": [
+      "ara"
+    ],
+    "primaryLanguage": "ara",
+    "shippingZone": "AS-BH",
+    "taxRegion": "AS-BH",
+    "geographicalRegion": "Asia",
+    "latitude": 26,
+    "longitude": 50.55,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "BH-NOR",
+    "name": "Northern",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/bh-nor.png",
+    "flagEmoji": "BH",
+    "languages": [
+      "ara"
+    ],
+    "primaryLanguage": "ara",
+    "shippingZone": "AS-BH",
+    "taxRegion": "AS-BH",
+    "geographicalRegion": "Asia",
+    "latitude": 26,
+    "longitude": 50.55,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": true,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "BH-SOU",
+    "name": "Southern",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/bh-sou.png",
+    "flagEmoji": "BH",
+    "languages": [
+      "ara"
+    ],
+    "primaryLanguage": "ara",
+    "shippingZone": "AS-BH",
+    "taxRegion": "AS-BH",
+    "geographicalRegion": "Asia",
+    "latitude": 26,
+    "longitude": 50.55,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  }
+]

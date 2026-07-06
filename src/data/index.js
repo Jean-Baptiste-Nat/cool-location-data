@@ -1,12 +1,12 @@
-import { canada } from "./countries/ca.js";
-import { canadaRegions } from "./regions/ca.js";
-import { canadaMetroAreas } from "./metro/ca.js";
+import canada from "./countries/ca.js";
+import canadaRegions from "./regions/ca.js";
+import canadaMetroAreas from "./metro/ca.js";
 import {
   worldCountries,
   worldRegions,
   worldMetroAreas,
   worldMetadata
-} from "./generated/world.generated.js";
+} from "./world.js";
 
 const countriesMap = new Map(worldCountries.map((country) => [country.code, country]));
 countriesMap.set(canada.code, canada);

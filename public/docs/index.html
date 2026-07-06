@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cool Location Data - Documentation</title>
-    <link id="dynamicFavicon" rel="icon" type="image/png" href="/public/assets/img/square.png">
+    <link id="dynamicFavicon" rel="icon" type="image/png" href="../assets/img/square.jpg">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@500;700&display=swap");
 
@@ -47,7 +47,7 @@
             color: var(--text);
             background:
                 linear-gradient(rgba(4, 14, 24, 0.72), rgba(4, 14, 24, 0.72)),
-                var(--brand-bg-image, url("/assets/img/pays.jpg")),
+                var(--brand-bg-image, url("../assets/img/pays.jpg")),
                 radial-gradient(60rem 30rem at -20% -10%, #1a607a, transparent 70%),
                 radial-gradient(64rem 32rem at 110% 10%, #15465d, transparent 70%),
                 linear-gradient(135deg, var(--bgA), var(--bgB));
@@ -192,6 +192,14 @@
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         }
 
+        .playground-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            grid-column: 1 / -1;
+            flex-wrap: wrap;
+        }
+
         .playground label {
             display: grid;
             gap: 6px;
@@ -211,10 +219,28 @@
             outline: none;
         }
 
-        .playground textarea {
-            min-height: 88px;
-            resize: vertical;
-            grid-column: 1 / -1;
+        .tester-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(246, 200, 95, 0.5);
+            background: linear-gradient(135deg, rgba(246, 200, 95, 0.22), rgba(214, 122, 27, 0.18));
+            color: var(--text);
+            border-radius: 999px;
+            padding: 11px 16px;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+        }
+
+        .tester-btn img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .tester-btn:hover {
+            transform: translateY(-1px);
         }
 
         html[data-theme="light"] pre {
@@ -275,7 +301,9 @@
 
     <div class="layout">
         <aside class="sidebar">
-            <div class="brand"><img data-brand-logo src="/public/assets/img/pays.png" alt="Cool Location Data"></div>
+            <button class="brand" onclick="window.location.href='/public/'" style="cursor: pointer;">
+                <img data-brand-logo src="../assets/img/pays.png" alt="Cool Location Data">
+            </button>
             <input class="search" id="searchNav" placeholder="Rechercher une section">
             <nav class="menu" id="menu">
                 <a href="#installation">Installation</a>
@@ -304,53 +332,49 @@
                 <span class="chip">window.CoolLocationData</span>
                 <span class="chip">ESM import</span>
                 <span class="chip">Node.js compatible</span>
-                <pre><code>import { getCountryData, getRegion, getShippingZone } from "cool-location-data";
-
-const country = getCountryData("CA");
-const region = getRegion("CA", "CA-QC");
-const shipping = getShippingZone("CA", "CA-QC");</code></pre>
+                <pre><code>
+                    import { getCountryData, getRegion, getShippingZone } from "cool-location-data";
+                    const country = getCountryData("CA");
+                    const region = getRegion("CA", "CA-QC");
+                    const shipping = getShippingZone("CA", "CA-QC");
+</code></pre>
             </section>
 
             <section id="playground">
                 <h2>Test Temps Reel</h2>
-                <p>Change les champs pour tester les helpers et afficher le resultat JSON en direct.</p>
+                <p>Saisis une requete puis clique sur Tester pour lancer la recherche realtime.</p>
                 <form class="playground" id="liveTestForm" autocomplete="off">
                     <label>
-                        Country Code/Name
-                        <input id="countryInput" type="text" value="CA" placeholder="CA ou Canada">
-                    </label>
-                    <label>
-                        Region Code/Name
-                        <input id="regionInput" type="text" value="QC" placeholder="QC ou Quebec">
-                    </label>
-                    <label>
                         Search Query
-                        <input id="searchInput" type="text" value="montreal" placeholder="City/Country/Region">
+                        <input id="searchInput" type="text" placeholder="City/Country/Region">
                     </label>
-                    <label>
-                        Notes (non execute, juste memo live)
-                        <textarea id="notesInput" placeholder="Ex: test checkout Stripe pour CA-QC"></textarea>
-                    </label>
+                    <div class="playground-actions">
+                        <button type="submit" class="tester-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ffffff"><path d="M216-144q-45 0-65-40.5t8-75.5l201-244v-240h-36q-15 0-25.5-10.5T288-780q0-15 10.5-25.5T324-816h312q15 0 25.5 10.5T672-780q0 15-10.5 25.5T636-744h-36v240l201 244q29 35 9 75.5T744-144H216Zm102-120h324L518-416h-76L318-264Zm-102 48h528L528-480v-264h-96v264L216-216Zm264-264Z"/></svg> Tester
+                        </button>
+                    </div>
                 </form>
-                <pre><code id="playgroundOutput">Chargement...</code></pre>
+                <pre id="playgroundOutput">Aucune donnée de test chargée. Cliquez sur Tester pour lancer la recherche realtime.</pre>
             </section>
 
             <section id="api">
                 <h2>API REST</h2>
                 <p>Routes disponibles:</p>
-                <pre><code>GET /api/countries
-GET /api/countries/:country
-GET /api/countries/:country/regions
-GET /api/countries/:country/regions/:region
-GET /api/countries/:country/metro
-GET /api/search?q=montreal
-GET /api/languages
-GET /api/currencies
-GET /api/shipping
-GET /api/taxes
-GET /api/timezones
-GET /api/flags
-GET /api/version</code></pre>
+                <pre><code>
+                    GET /api/countries
+                    GET /api/countries/:country
+                    GET /api/countries/:country/regions
+                    GET /api/countries/:country/regions/:region
+                    GET /api/countries/:country/metro
+                    GET /api/search?q=montreal
+                    GET /api/languages
+                    GET /api/currencies
+                    GET /api/shipping
+                    GET /api/taxes
+                    GET /api/timezones
+                    GET /api/flags
+                    GET /api/version
+                </code></pre>
             </section>
 
             <section id="helpers">
@@ -396,18 +420,75 @@ const currency = getCountryCurrency("CA");</code></pre>
         </main>
     </div>
 
-    <script src="/location-data.js"></script>
     <script>
+        function prefersPublicPrefix() {
+            return window.location.pathname.includes("/public/");
+        }
+
+        function apiScriptCandidates() {
+            return prefersPublicPrefix()
+                ? ["/public/location-data.js", "/location-data.js"]
+                : ["/location-data.js", "/public/location-data.js"];
+        }
+
+        function manifestCandidates() {
+            return prefersPublicPrefix()
+                ? ["/public/assets/img/manifest.json", "/assets/img/manifest.json"]
+                : ["/assets/img/manifest.json", "/public/assets/img/manifest.json"];
+        }
+
+        function fallbackAsset(pathSuffix) {
+            return prefersPublicPrefix() ? `/public/assets/img/${pathSuffix}` : `/assets/img/${pathSuffix}`;
+        }
+
+        async function ensureApiLoaded() {
+            if (window.CoolLocationData) return window.CoolLocationData;
+
+            const urls = apiScriptCandidates();
+            for (const url of urls) {
+                try {
+                    await new Promise((resolve, reject) => {
+                        const script = document.createElement("script");
+                        script.src = url;
+                        script.async = true;
+                        script.onload = resolve;
+                        script.onerror = reject;
+                        document.head.appendChild(script);
+                    });
+
+                    if (window.CoolLocationData) {
+                        return window.CoolLocationData;
+                    }
+                } catch {
+                    // Try next candidate URL.
+                }
+            }
+
+            return null;
+        }
+
         async function applyBrandAssets() {
             try {
-                const response = await fetch("/public/assets/img/manifest.json", { cache: "no-store" });
-                if (!response.ok) return;
+                let response = null;
+                for (const url of manifestCandidates()) {
+                    try {
+                        const candidate = await fetch(url, { cache: "no-store" });
+                        if (candidate.ok) {
+                            response = candidate;
+                            break;
+                        }
+                    } catch {
+                        // Try next URL candidate.
+                    }
+                }
+
+                if (!response) return;
 
                 const manifest = await response.json();
                 const images = Array.isArray(manifest.images) ? manifest.images : [];
                 const map = new Map(images.map((item) => [item.name, item.url]));
 
-                const logoUrl = map.get("pays.png") || map.get("square.png") || "/public/assets/img/pays.png";
+                const logoUrl = map.get("pays.png") || map.get("square.png") || fallbackAsset("pays.png");
                 const bgUrl = map.get("pays.jpg") || map.get("square.jpg") || logoUrl;
                 const iconUrl = map.get("square.png") || logoUrl;
 
@@ -463,11 +544,17 @@ const currency = getCountryCurrency("CA");</code></pre>
             return window.CoolLocationData || null;
         }
 
-        function liveTestRender() {
+        async function liveTestRender() {
             const output = document.getElementById("playgroundOutput");
             if (!output) return;
 
-            const api = resolveApi();
+            output.textContent = "Chargement realtime...";
+
+            let api = resolveApi();
+            if (!api) {
+                api = await ensureApiLoaded();
+            }
+
             if (!api) {
                 output.textContent = JSON.stringify({
                     error: "CoolLocationData non charge. Verifier /location-data.js"
@@ -475,47 +562,27 @@ const currency = getCountryCurrency("CA");</code></pre>
                 return;
             }
 
-            const countryValue = document.getElementById("countryInput").value;
-            const regionValue = document.getElementById("regionInput").value;
-            const searchValue = document.getElementById("searchInput").value;
-            const notesValue = document.getElementById("notesInput").value;
+            const searchValue = document.getElementById("searchInput").value.trim();
 
             const payload = {
                 generatedAt: new Date().toISOString(),
-                input: {
-                    country: countryValue,
-                    region: regionValue,
-                    search: searchValue,
-                    notes: notesValue
-                },
                 version: api.getApiVersion ? api.getApiVersion() : null,
-                countryData: api.getCountryData ? api.getCountryData(countryValue) : null,
-                regionData: api.getRegion ? api.getRegion(countryValue, regionValue) : null,
-                shippingZone: api.getShippingZone ? api.getShippingZone(countryValue, regionValue) : null,
-                taxZone: api.getTaxZone ? api.getTaxZone(countryValue, regionValue) : null,
                 searchCountry: api.searchCountry ? api.searchCountry(searchValue) : [],
-                searchRegion: api.searchRegion ? api.searchRegion(searchValue, countryValue) : [],
+                searchRegion: api.searchRegion ? api.searchRegion(searchValue) : [],
                 searchCity: api.searchCity ? api.searchCity(searchValue) : []
             };
 
             output.textContent = JSON.stringify(payload, null, 2);
         }
 
-        let liveTimer = null;
         function bindLiveForm() {
             const form = document.getElementById("liveTestForm");
             if (!form) return;
 
-            const schedule = () => {
-                clearTimeout(liveTimer);
-                liveTimer = setTimeout(liveTestRender, 120);
-            };
-
-            form.querySelectorAll("input, textarea").forEach((field) => {
-                field.addEventListener("input", schedule);
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                liveTestRender();
             });
-
-            liveTestRender();
         }
 
         installCopyButtons();

@@ -1,0 +1,80 @@
+[
+  {
+    "code": "BA-FED",
+    "name": "Federation of Bosnia and Herzegovina",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/ba-fed.png",
+    "flagEmoji": "BA",
+    "languages": [
+      "bos",
+      "hrv",
+      "srp"
+    ],
+    "primaryLanguage": "bos",
+    "shippingZone": "EU-BA",
+    "taxRegion": "EU-BA",
+    "geographicalRegion": "Europe",
+    "latitude": 44,
+    "longitude": 18,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "BA-REP",
+    "name": "Republika Srpska",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/ba-rep.png",
+    "flagEmoji": "BA",
+    "languages": [
+      "bos",
+      "hrv",
+      "srp"
+    ],
+    "primaryLanguage": "bos",
+    "shippingZone": "EU-BA",
+    "taxRegion": "EU-BA",
+    "geographicalRegion": "Europe",
+    "latitude": 44,
+    "longitude": 18,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "BA-BRC",
+    "name": "Brčko District",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/ba-brc.png",
+    "flagEmoji": "BA",
+    "languages": [
+      "bos",
+      "hrv",
+      "srp"
+    ],
+    "primaryLanguage": "bos",
+    "shippingZone": "EU-BA",
+    "taxRegion": "EU-BA",
+    "geographicalRegion": "Europe",
+    "latitude": 44,
+    "longitude": 18,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  }
+]

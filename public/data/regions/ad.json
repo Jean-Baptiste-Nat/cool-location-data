@@ -1,0 +1,26 @@
+[
+  {
+    "code": "AD-AND",
+    "name": "Andorra",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/ad-and.png",
+    "flagEmoji": "AD",
+    "languages": [
+      "cat"
+    ],
+    "primaryLanguage": "cat",
+    "shippingZone": "EU-AD",
+    "taxRegion": "EU-AD",
+    "geographicalRegion": "Europe",
+    "latitude": 42.5,
+    "longitude": 1.5,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  }
+]

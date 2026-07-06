@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "cool-attitude-online-store"
+  },
+  "targets": {
+    "cool-attitude-online-store": {
+      "hosting": {
+        "cool-location-data": [
+          "cool-location-data"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+export const metroAreasData = [
+  {
+    "code": "BZ-BELIZE",
+    "countryCode": "BZ",
+    "regionCode": "BELIZE",
+    "name": "Belize Belize Metro",
+    "cities": [],
+    "center": "Belize",
+    "latitude": 17.25,
+    "longitude": -88.75,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "BZ-CAYO",
+    "countryCode": "BZ",
+    "regionCode": "CAYO",
+    "name": "Belize Cayo Metro",
+    "cities": [],
+    "center": "Cayo",
+    "latitude": 17.25,
+    "longitude": -88.75,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "BZ-COROZAL",
+    "countryCode": "BZ",
+    "regionCode": "COROZAL",
+    "name": "Belize Corozal Metro",
+    "cities": [],
+    "center": "Corozal",
+    "latitude": 17.25,
+    "longitude": -88.75,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "BZ-ORANGE-WALK",
+    "countryCode": "BZ",
+    "regionCode": "ORANGE-WALK",
+    "name": "Belize Orange Walk Metro",
+    "cities": [],
+    "center": "Orange Walk",
+    "latitude": 17.25,
+    "longitude": -88.75,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "BZ-STANN-CREEK",
+    "countryCode": "BZ",
+    "regionCode": "STANN-CREEK",
+    "name": "Belize Stann Creek Metro",
+    "cities": [],
+    "center": "Stann Creek",
+    "latitude": 17.25,
+    "longitude": -88.75,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "BZ-TOLEDO",
+    "countryCode": "BZ",
+    "regionCode": "TOLEDO",
+    "name": "Belize Toledo Metro",
+    "cities": [],
+    "center": "Toledo",
+    "latitude": 17.25,
+    "longitude": -88.75,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  }
+];
+export default metroAreasData;

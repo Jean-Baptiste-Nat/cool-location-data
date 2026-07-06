@@ -1,0 +1,66 @@
+[
+  {
+    "countryCode": "AU",
+    "regionCode": "AU-NSW",
+    "code": "SYD",
+    "name": "Sydney Metro",
+    "cities": [
+      "Sydney",
+      "Parramatta",
+      "Liverpool"
+    ],
+    "center": "Sydney",
+    "latitude": -27,
+    "longitude": 133,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "AU",
+    "regionCode": "AU-QLD",
+    "code": "BNE",
+    "name": "Brisbane Metro",
+    "cities": [
+      "Brisbane",
+      "Gold Coast",
+      "Sunshine Coast"
+    ],
+    "center": "Brisbane",
+    "latitude": -27,
+    "longitude": 133,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "AU",
+    "regionCode": "AU-VIC",
+    "code": "MEL",
+    "name": "Melbourne Metro",
+    "cities": [
+      "Melbourne",
+      "Geelong",
+      "Frankston"
+    ],
+    "center": "Melbourne",
+    "latitude": -27,
+    "longitude": 133,
+    "radius": 40,
+    "population": 0
+  },
+  {
+    "countryCode": "AU",
+    "regionCode": "AU-WA",
+    "code": "PER",
+    "name": "Perth Metro",
+    "cities": [
+      "Perth",
+      "Fremantle",
+      "Joondalup"
+    ],
+    "center": "Perth",
+    "latitude": -27,
+    "longitude": 133,
+    "radius": 40,
+    "population": 0
+  }
+]

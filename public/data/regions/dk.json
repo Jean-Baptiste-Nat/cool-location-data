@@ -1,0 +1,122 @@
+[
+  {
+    "code": "DK-CAP",
+    "name": "Capital Region",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/dk-cap.png",
+    "flagEmoji": "DK",
+    "languages": [
+      "dan"
+    ],
+    "primaryLanguage": "dan",
+    "shippingZone": "EU-DK",
+    "taxRegion": "EU-DK",
+    "geographicalRegion": "Europe",
+    "latitude": 56,
+    "longitude": 10,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "DK-CEN",
+    "name": "Central Denmark",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/dk-cen.png",
+    "flagEmoji": "DK",
+    "languages": [
+      "dan"
+    ],
+    "primaryLanguage": "dan",
+    "shippingZone": "EU-DK",
+    "taxRegion": "EU-DK",
+    "geographicalRegion": "Europe",
+    "latitude": 56,
+    "longitude": 10,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "DK-NOR",
+    "name": "North Denmark",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/dk-nor.png",
+    "flagEmoji": "DK",
+    "languages": [
+      "dan"
+    ],
+    "primaryLanguage": "dan",
+    "shippingZone": "EU-DK",
+    "taxRegion": "EU-DK",
+    "geographicalRegion": "Europe",
+    "latitude": 56,
+    "longitude": 10,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": true,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "DK-ZEA",
+    "name": "Zealand",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/dk-zea.png",
+    "flagEmoji": "DK",
+    "languages": [
+      "dan"
+    ],
+    "primaryLanguage": "dan",
+    "shippingZone": "EU-DK",
+    "taxRegion": "EU-DK",
+    "geographicalRegion": "Europe",
+    "latitude": 56,
+    "longitude": 10,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  },
+  {
+    "code": "DK-SOU",
+    "name": "Southern Denmark",
+    "type": "region",
+    "flagUrl": "/assets/flags/regions/dk-sou.png",
+    "flagEmoji": "DK",
+    "languages": [
+      "dan"
+    ],
+    "primaryLanguage": "dan",
+    "shippingZone": "EU-DK",
+    "taxRegion": "EU-DK",
+    "geographicalRegion": "Europe",
+    "latitude": 56,
+    "longitude": 10,
+    "timezone": "UTC",
+    "verified": true,
+    "isRemoteArea": false,
+    "isIsland": false,
+    "population": 0,
+    "area": 0,
+    "createdAt": "2026-07-06T06:57:49.738Z",
+    "updatedAt": "2026-07-06T06:57:49.738Z"
+  }
+]

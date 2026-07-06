@@ -1,0 +1,237 @@
+export const metroAreasData = [
+  {
+    "code": "DE-BADEN-WURTTEMBERG",
+    "countryCode": "DE",
+    "regionCode": "BADEN-WURTTEMBERG",
+    "name": "Germany Baden-Württemberg Metro",
+    "cities": [],
+    "center": "Baden-Württemberg",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-BAYERN",
+    "countryCode": "DE",
+    "regionCode": "BAYERN",
+    "name": "Germany Bayern Metro",
+    "cities": [
+      "[object Object]"
+    ],
+    "center": "[object Object]",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-BERLIN",
+    "countryCode": "DE",
+    "regionCode": "BERLIN",
+    "name": "Germany Berlin Metro",
+    "cities": [
+      "[object Object]"
+    ],
+    "center": "[object Object]",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-BRANDENBURG",
+    "countryCode": "DE",
+    "regionCode": "BRANDENBURG",
+    "name": "Germany Brandenburg Metro",
+    "cities": [],
+    "center": "Brandenburg",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-BREMEN",
+    "countryCode": "DE",
+    "regionCode": "BREMEN",
+    "name": "Germany Bremen Metro",
+    "cities": [],
+    "center": "Bremen",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-HAMBURG",
+    "countryCode": "DE",
+    "regionCode": "HAMBURG",
+    "name": "Germany Hamburg Metro",
+    "cities": [
+      "[object Object]"
+    ],
+    "center": "[object Object]",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-HESSEN",
+    "countryCode": "DE",
+    "regionCode": "HESSEN",
+    "name": "Germany Hessen Metro",
+    "cities": [
+      "[object Object]"
+    ],
+    "center": "[object Object]",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-MECKLENBURG-VORPOMMERN",
+    "countryCode": "DE",
+    "regionCode": "MECKLENBURG-VORPOMMERN",
+    "name": "Germany Mecklenburg-Vorpommern Metro",
+    "cities": [],
+    "center": "Mecklenburg-Vorpommern",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-NIEDERSACHSEN",
+    "countryCode": "DE",
+    "regionCode": "NIEDERSACHSEN",
+    "name": "Germany Niedersachsen Metro",
+    "cities": [],
+    "center": "Niedersachsen",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-NORDRHEIN-WESTFALEN",
+    "countryCode": "DE",
+    "regionCode": "NORDRHEIN-WESTFALEN",
+    "name": "Germany Nordrhein-Westfalen Metro",
+    "cities": [
+      "[object Object]"
+    ],
+    "center": "[object Object]",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-RHEINLAND-PFALZ",
+    "countryCode": "DE",
+    "regionCode": "RHEINLAND-PFALZ",
+    "name": "Germany Rheinland-Pfalz Metro",
+    "cities": [],
+    "center": "Rheinland-Pfalz",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-SAARLAND",
+    "countryCode": "DE",
+    "regionCode": "SAARLAND",
+    "name": "Germany Saarland Metro",
+    "cities": [],
+    "center": "Saarland",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-SACHSEN",
+    "countryCode": "DE",
+    "regionCode": "SACHSEN",
+    "name": "Germany Sachsen Metro",
+    "cities": [],
+    "center": "Sachsen",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-SACHSEN-ANHALT",
+    "countryCode": "DE",
+    "regionCode": "SACHSEN-ANHALT",
+    "name": "Germany Sachsen-Anhalt Metro",
+    "cities": [],
+    "center": "Sachsen-Anhalt",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-SCHLESWIG-HOLSTEIN",
+    "countryCode": "DE",
+    "regionCode": "SCHLESWIG-HOLSTEIN",
+    "name": "Germany Schleswig-Holstein Metro",
+    "cities": [],
+    "center": "Schleswig-Holstein",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  },
+  {
+    "code": "DE-THURINGEN",
+    "countryCode": "DE",
+    "regionCode": "THURINGEN",
+    "name": "Germany Thüringen Metro",
+    "cities": [],
+    "center": "Thüringen",
+    "latitude": 51,
+    "longitude": 9,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-06T07:05:58.512Z",
+    "updatedAt": "2026-07-06T07:05:58.512Z"
+  }
+];
+export default metroAreasData;
