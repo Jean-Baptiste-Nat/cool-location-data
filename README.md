@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Cool Location Data
 
 Professional global location intelligence library designed for shipping, taxes, checkout, address validation, payments, geolocation and analytics.
@@ -181,3 +182,6 @@ API runtime endpoints include:
 ## Notes
 
 This repository now provides a scalable architecture for continent-by-continent expansion with stable APIs and independent deployment.
+=======
+# cool-location-data
+>>>>>>> 9046e5ed0d9040068d8912d4a675381819de13d6
