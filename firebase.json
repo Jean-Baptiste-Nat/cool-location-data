@@ -3,6 +3,7 @@
     "source": "functions"
   },
   "hosting": {
+    "target": "cool-location-data",
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -17,7 +18,7 @@
     ],
     "headers": [
       {
-        "source": "**/*.@(js|json)",
+        "source": "**/*.@(js|json|png|jpg|jpeg|svg)",
         "headers": [
           {
             "key": "Cache-Control",

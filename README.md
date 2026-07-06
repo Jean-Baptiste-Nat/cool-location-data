@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Cool Location Data
 
 Professional global location intelligence library designed for shipping, taxes, checkout, address validation, payments, geolocation and analytics.
@@ -20,7 +19,7 @@ Professional global location intelligence library designed for shipping, taxes, 
 
 ## Real-time global data mode
 
-- World countries are synced automatically from a live dataset source into `src/data/generated/world.generated.js`.
+- World countries are synced automatically from a live dataset source into `src/data/world.js` and per-country files under `src/data/countries`, `src/data/regions`, and `src/data/metro`.
 - Canada remains curated and overrides generated data for production-grade regional details.
 - Automated sync can run hourly via GitHub Actions schedule.
 - Build output is regenerated after each sync for Hosting/API consistency.
@@ -35,9 +34,9 @@ Professional global location intelligence library designed for shipping, taxes, 
 - public/assets/flags/countries: Country flags
 - public/assets/flags/regions: Regional flags
 - functions/index.js: Firebase Functions REST API
-- scripts/generate-json.js: Build JSON + bundles
-- scripts/download-flags.js: Download flags with fallback
-- scripts/update-data.js: Data update report and rollout tracking
+- generate-json.js: Build JSON + bundles
+- download-flags.js: Download flags with fallback
+- update-data.js: Data update report and rollout tracking
 - src: Source dataset + helpers API
 
 ## Install and use
@@ -182,6 +181,3 @@ API runtime endpoints include:
 ## Notes
 
 This repository now provides a scalable architecture for continent-by-continent expansion with stable APIs and independent deployment.
-=======
-# cool-location-data
->>>>>>> 9046e5ed0d9040068d8912d4a675381819de13d6
