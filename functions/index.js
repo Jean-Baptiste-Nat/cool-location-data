@@ -1,7 +1,25 @@
 const express = require("express");
 const cors = require("cors");
+const fs = require("node:fs");
+const path = require("node:path");
 const { onRequest } = require("firebase-functions/v2/https");
-const data = require("../public/location-data.json");
+
+function loadPayload() {
+  const candidates = [
+    path.join(__dirname, "location-data.json"),
+    path.join(__dirname, "..", "public", "location-data.json")
+  ];
+
+  for (const candidate of candidates) {
+    if (fs.existsSync(candidate)) {
+      return JSON.parse(fs.readFileSync(candidate, "utf8"));
+    }
+  }
+
+  throw new Error("location-data.json not found for Functions runtime.");
+}
+
+const data = loadPayload();
 
 const app = express();
 app.use(cors({ origin: true }));
