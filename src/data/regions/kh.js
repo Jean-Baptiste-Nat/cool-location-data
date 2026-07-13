@@ -15,8 +15,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "BATTAMBANG",
@@ -34,8 +34,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KAMPONG-CHAM",
@@ -53,8 +53,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KAMPONG-CHHNANG",
@@ -72,8 +72,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KAMPONG-SPEU",
@@ -91,8 +91,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KAMPONG-THOM",
@@ -110,8 +110,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KAMPOT",
@@ -129,8 +129,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KANDAL",
@@ -148,8 +148,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KEP",
@@ -167,8 +167,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KOH-KONG",
@@ -186,8 +186,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KRATIE",
@@ -205,8 +205,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "MONDULKIRI",
@@ -224,8 +224,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "ODDAR-MEANCHEY",
@@ -243,8 +243,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PAILIN",
@@ -262,8 +262,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PHNOM-PENH",
@@ -281,8 +281,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PREAH-SIHANOUK",
@@ -300,8 +300,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PREAH-VIHEAR",
@@ -319,8 +319,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PREY-VENG",
@@ -338,8 +338,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PURSAT",
@@ -357,8 +357,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "RATANAKIRI",
@@ -376,8 +376,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "SIEM-REAP",
@@ -395,8 +395,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "STUNG-TRENG",
@@ -414,8 +414,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "SVAY-RIENG",
@@ -433,8 +433,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "TAKEO",
@@ -452,8 +452,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "TBOUNG-KHMUM",
@@ -471,8 +471,8 @@ export const regionData = [
     "area": 7241,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   }
 ];
 export default regionData;

@@ -15,8 +15,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "NISAVA",
@@ -34,8 +34,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "SUMADIJA",
@@ -53,8 +53,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "ZAJECAR",
@@ -72,8 +72,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PODUNAVLJE",
@@ -91,8 +91,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "BOR",
@@ -110,8 +110,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "BRANICEVO",
@@ -129,8 +129,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "POMORAVLJE",
@@ -148,8 +148,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "ZLATIBOR",
@@ -167,8 +167,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "MORAVICA",
@@ -186,8 +186,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "RASKA",
@@ -205,8 +205,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "RASINA",
@@ -224,8 +224,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "TOPLICA",
@@ -243,8 +243,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PIROT",
@@ -262,8 +262,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "JABLANICA",
@@ -281,8 +281,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PCINJA",
@@ -300,8 +300,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KOSOVO",
@@ -319,8 +319,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PECKA",
@@ -338,8 +338,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PRIZREN",
@@ -357,8 +357,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KOSOVSKA-MITROVICA",
@@ -376,8 +376,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KOSOVO-POMORAVLJE",
@@ -395,8 +395,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "MACVA",
@@ -414,8 +414,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KOLUBARA",
@@ -433,8 +433,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "PODRINJE",
@@ -452,8 +452,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "BELGRADE",
@@ -471,8 +471,8 @@ export const regionData = [
     "area": 3534,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   }
 ];
 export default regionData;

@@ -15,8 +15,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "BUA",
@@ -34,8 +34,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "CAKAUDROVE",
@@ -53,8 +53,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "KADAVU",
@@ -72,8 +72,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "LAU",
@@ -91,8 +91,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "LOMAIVITI",
@@ -110,8 +110,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "MACUATA",
@@ -129,8 +129,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "NADROGA-NAVOSA",
@@ -148,8 +148,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "NAITASIRI",
@@ -167,8 +167,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "NAMOSI",
@@ -186,8 +186,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "RA",
@@ -205,8 +205,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "REWA",
@@ -224,8 +224,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "SERUA",
@@ -243,8 +243,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "TAILEVU",
@@ -262,8 +262,8 @@ export const regionData = [
     "area": 1305,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   }
 ];
 export default regionData;

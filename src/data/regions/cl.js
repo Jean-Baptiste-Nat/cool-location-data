@@ -15,8 +15,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "TARAPACA",
@@ -34,8 +34,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "ANTOFAGASTA",
@@ -53,8 +53,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "ATACAMA",
@@ -72,8 +72,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "COQUIMBO",
@@ -91,8 +91,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "VALPARAISO",
@@ -110,8 +110,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "METROPOLITANA-DE-SANTIAGO",
@@ -129,8 +129,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "O-HIGGINS",
@@ -148,8 +148,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "MAULE",
@@ -167,8 +167,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "NUBLE",
@@ -186,8 +186,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "BIOBIO",
@@ -205,8 +205,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "ARAUCANIA",
@@ -224,8 +224,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "LOS-RIOS",
@@ -243,8 +243,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "LOS-LAGOS",
@@ -262,8 +262,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "AYSEN",
@@ -281,8 +281,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
     "code": "MAGALLANES",
@@ -300,8 +300,8 @@ export const regionData = [
     "area": 47256,
     "isRemoteArea": false,
     "isIsland": false,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   }
 ];
 export default regionData;

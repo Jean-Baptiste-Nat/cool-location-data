@@ -37,7 +37,7 @@ export const countryData = {
   "area": 710,
   "verified": true,
   "isActive": true,
-  "createdAt": "2026-07-06T07:05:58.512Z",
-  "updatedAt": "2026-07-06T07:05:58.512Z"
+  "createdAt": "2026-07-13T09:51:43.902Z",
+  "updatedAt": "2026-07-13T09:51:43.902Z"
 };
 export default countryData;

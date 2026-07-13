@@ -1,195 +1,132 @@
 export const metroAreasData = [
   {
-    "code": "CA-CA-AB",
+    "code": "YYC",
     "countryCode": "CA",
     "regionCode": "CA-AB",
-    "name": "Canada Alberta Metro",
+    "name": "Calgary Metro",
     "cities": [
-      "[object Object]"
+      "Calgary",
+      "Airdrie",
+      "Okotoks"
     ],
-    "center": "[object Object]",
-    "latitude": 60,
-    "longitude": -95,
+    "center": "Calgary",
+    "latitude": 53.9333,
+    "longitude": -116.5765,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "CA-CA-BC",
+    "code": "YEG",
+    "countryCode": "CA",
+    "regionCode": "CA-AB",
+    "name": "Edmonton Metro",
+    "cities": [
+      "Edmonton",
+      "St. Albert",
+      "Sherwood Park"
+    ],
+    "center": "Edmonton",
+    "latitude": 53.9333,
+    "longitude": -116.5765,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
+  },
+  {
+    "code": "YVR",
     "countryCode": "CA",
     "regionCode": "CA-BC",
-    "name": "Canada British Columbia Metro",
+    "name": "Metro Vancouver",
     "cities": [
-      "[object Object]"
+      "Vancouver",
+      "Burnaby",
+      "Surrey",
+      "Richmond"
     ],
-    "center": "[object Object]",
-    "latitude": 60,
-    "longitude": -95,
+    "center": "Vancouver",
+    "latitude": 53.7267,
+    "longitude": -127.6476,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "CA-CA-MB",
-    "countryCode": "CA",
-    "regionCode": "CA-MB",
-    "name": "Canada Manitoba Metro",
-    "cities": [],
-    "center": "Manitoba",
-    "latitude": 60,
-    "longitude": -95,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "CA-CA-NB",
-    "countryCode": "CA",
-    "regionCode": "CA-NB",
-    "name": "Canada New Brunswick Metro",
-    "cities": [],
-    "center": "New Brunswick",
-    "latitude": 60,
-    "longitude": -95,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "CA-CA-NL",
-    "countryCode": "CA",
-    "regionCode": "CA-NL",
-    "name": "Canada Newfoundland and Labrador Metro",
-    "cities": [],
-    "center": "Newfoundland and Labrador",
-    "latitude": 60,
-    "longitude": -95,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "CA-CA-NT",
-    "countryCode": "CA",
-    "regionCode": "CA-NT",
-    "name": "Canada Northwest Territories Metro",
-    "cities": [],
-    "center": "Northwest Territories",
-    "latitude": 60,
-    "longitude": -95,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "CA-CA-NS",
+    "code": "YHZ",
     "countryCode": "CA",
     "regionCode": "CA-NS",
-    "name": "Canada Nova Scotia Metro",
+    "name": "Halifax Metro",
     "cities": [
-      "[object Object]"
+      "Halifax",
+      "Dartmouth",
+      "Bedford"
     ],
-    "center": "[object Object]",
-    "latitude": 60,
-    "longitude": -95,
+    "center": "Halifax",
+    "latitude": 44.682,
+    "longitude": -63.7443,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "CA-CA-NU",
-    "countryCode": "CA",
-    "regionCode": "CA-NU",
-    "name": "Canada Nunavut Metro",
-    "cities": [],
-    "center": "Nunavut",
-    "latitude": 60,
-    "longitude": -95,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "CA-CA-ON",
+    "code": "YTO",
     "countryCode": "CA",
     "regionCode": "CA-ON",
-    "name": "Canada Ontario Metro",
+    "name": "Greater Toronto Area",
     "cities": [
-      "[object Object]"
+      "Toronto",
+      "Mississauga",
+      "Brampton",
+      "Markham",
+      "Vaughan"
     ],
-    "center": "[object Object]",
-    "latitude": 60,
-    "longitude": -95,
+    "center": "Toronto",
+    "latitude": 51.2538,
+    "longitude": -85.3232,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "CA-CA-PE",
+    "code": "YOW",
     "countryCode": "CA",
-    "regionCode": "CA-PE",
-    "name": "Canada Prince Edward Island Metro",
-    "cities": [],
-    "center": "Prince Edward Island",
-    "latitude": 60,
-    "longitude": -95,
+    "regionCode": "CA-ON",
+    "name": "Ottawa-Gatineau",
+    "cities": [
+      "Ottawa",
+      "Gatineau"
+    ],
+    "center": "Ottawa",
+    "latitude": 51.2538,
+    "longitude": -85.3232,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "CA-CA-QC",
+    "code": "YMQ",
     "countryCode": "CA",
     "regionCode": "CA-QC",
-    "name": "Canada Quebec Metro",
+    "name": "Grand Montréal",
     "cities": [
-      "[object Object]"
+      "Montréal",
+      "Laval",
+      "Longueuil",
+      "Brossard"
     ],
-    "center": "[object Object]",
-    "latitude": 60,
-    "longitude": -95,
+    "center": "Montréal",
+    "latitude": 52.9399,
+    "longitude": -73.5491,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "CA-CA-SK",
-    "countryCode": "CA",
-    "regionCode": "CA-SK",
-    "name": "Canada Saskatchewan Metro",
-    "cities": [],
-    "center": "Saskatchewan",
-    "latitude": 60,
-    "longitude": -95,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "CA-CA-YT",
-    "countryCode": "CA",
-    "regionCode": "CA-YT",
-    "name": "Canada Yukon Metro",
-    "cities": [],
-    "center": "Yukon",
-    "latitude": 60,
-    "longitude": -95,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   }
 ];
 export default metroAreasData;

@@ -1,269 +1,166 @@
 export const metroAreasData = [
   {
-    "code": "FR-AUVERGNE-RHONE-ALPES",
+    "code": "LYO",
     "countryCode": "FR",
     "regionCode": "AUVERGNE-RHONE-ALPES",
-    "name": "France Auvergne-Rhône-Alpes Metro",
+    "name": "Lyon Metropole",
     "cities": [
-      "[object Object]"
+      "Lyon",
+      "Villeurbanne",
+      "Vénissieux"
     ],
-    "center": "[object Object]",
+    "center": "Lyon",
     "latitude": 46,
     "longitude": 2,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "FR-BOURGOGNE-FRANCHE-COMTE",
-    "countryCode": "FR",
-    "regionCode": "BOURGOGNE-FRANCHE-COMTE",
-    "name": "France Bourgogne-Franche-Comté Metro",
-    "cities": [],
-    "center": "Bourgogne-Franche-Comté",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-BRETAGNE",
+    "code": "RNS",
     "countryCode": "FR",
     "regionCode": "BRETAGNE",
-    "name": "France Bretagne Metro",
+    "name": "Rennes Métropole",
     "cities": [
-      "[object Object]"
+      "Rennes",
+      "Saint-Grégoire",
+      "Cesson-Sévigné"
     ],
-    "center": "[object Object]",
+    "center": "Rennes",
     "latitude": 46,
     "longitude": 2,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "FR-CENTRE-VAL-DE-LOIRE",
-    "countryCode": "FR",
-    "regionCode": "CENTRE-VAL-DE-LOIRE",
-    "name": "France Centre-Val de Loire Metro",
-    "cities": [],
-    "center": "Centre-Val de Loire",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-CORSE",
-    "countryCode": "FR",
-    "regionCode": "CORSE",
-    "name": "France Corse Metro",
-    "cities": [],
-    "center": "Corse",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-GRAND-EST",
-    "countryCode": "FR",
-    "regionCode": "GRAND-EST",
-    "name": "France Grand Est Metro",
-    "cities": [],
-    "center": "Grand Est",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-HAUTS-DE-FRANCE",
+    "code": "LIL",
     "countryCode": "FR",
     "regionCode": "HAUTS-DE-FRANCE",
-    "name": "France Hauts-de-France Metro",
+    "name": "Métropole Européenne de Lille",
     "cities": [
-      "[object Object]"
+      "Lille",
+      "Roubaix",
+      "Tourcoing"
     ],
-    "center": "[object Object]",
+    "center": "Lille",
     "latitude": 46,
     "longitude": 2,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "FR-ILE-DE-FRANCE",
+    "code": "PAR",
     "countryCode": "FR",
     "regionCode": "ILE-DE-FRANCE",
-    "name": "France Île-de-France Metro",
+    "name": "Grand Paris",
     "cities": [
-      "[object Object]"
+      "Paris",
+      "Boulogne-Billancourt",
+      "Saint-Denis",
+      "Nanterre"
     ],
-    "center": "[object Object]",
+    "center": "Paris",
     "latitude": 46,
     "longitude": 2,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "FR-NORMANDIE",
-    "countryCode": "FR",
-    "regionCode": "NORMANDIE",
-    "name": "France Normandie Metro",
-    "cities": [],
-    "center": "Normandie",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-NOUVELLE-AQUITAINE",
-    "countryCode": "FR",
-    "regionCode": "NOUVELLE-AQUITAINE",
-    "name": "France Nouvelle-Aquitaine Metro",
-    "cities": [],
-    "center": "Nouvelle-Aquitaine",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-OCCITANIE",
+    "code": "TLS",
     "countryCode": "FR",
     "regionCode": "OCCITANIE",
-    "name": "France Occitanie Metro",
+    "name": "Toulouse Métropole",
     "cities": [
-      "[object Object]"
+      "Toulouse",
+      "Blagnac",
+      "Colomiers"
     ],
-    "center": "[object Object]",
+    "center": "Toulouse",
     "latitude": 46,
     "longitude": 2,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "FR-PAYS-DE-LA-LOIRE",
+    "code": "MPL",
+    "countryCode": "FR",
+    "regionCode": "OCCITANIE",
+    "name": "Montpellier Méditerranée",
+    "cities": [
+      "Montpellier",
+      "Lattes",
+      "Castelnau-le-Lez"
+    ],
+    "center": "Montpellier",
+    "latitude": 46,
+    "longitude": 2,
+    "radius": 40,
+    "population": 0,
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
+  },
+  {
+    "code": "NTE",
     "countryCode": "FR",
     "regionCode": "PAYS-DE-LA-LOIRE",
-    "name": "France Pays de la Loire Metro",
+    "name": "Nantes Métropole",
     "cities": [
-      "[object Object]"
+      "Nantes",
+      "Saint-Herblain",
+      "Rezé"
     ],
-    "center": "[object Object]",
+    "center": "Nantes",
     "latitude": 46,
     "longitude": 2,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "FR-PROVENCE-ALPES-COTE-D-AZUR",
+    "code": "MRS",
     "countryCode": "FR",
     "regionCode": "PROVENCE-ALPES-COTE-D-AZUR",
-    "name": "France Provence-Alpes-Côte d'Azur Metro",
+    "name": "Aix-Marseille-Provence",
     "cities": [
-      "[object Object]"
+      "Marseille",
+      "Aix-en-Provence",
+      "Aubagne"
     ],
-    "center": "[object Object]",
+    "center": "Marseille",
     "latitude": 46,
     "longitude": 2,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   },
   {
-    "code": "FR-GUADELOUPE",
+    "code": "NCE",
     "countryCode": "FR",
-    "regionCode": "GUADELOUPE",
-    "name": "France Guadeloupe Metro",
-    "cities": [],
-    "center": "Guadeloupe",
+    "regionCode": "PROVENCE-ALPES-COTE-D-AZUR",
+    "name": "Nice Côte d'Azur",
+    "cities": [
+      "Nice",
+      "Cagnes-sur-Mer",
+      "Antibes"
+    ],
+    "center": "Nice",
     "latitude": 46,
     "longitude": 2,
     "radius": 40,
     "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-MARTINIQUE",
-    "countryCode": "FR",
-    "regionCode": "MARTINIQUE",
-    "name": "France Martinique Metro",
-    "cities": [],
-    "center": "Martinique",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-GUYANE",
-    "countryCode": "FR",
-    "regionCode": "GUYANE",
-    "name": "France Guyane Metro",
-    "cities": [],
-    "center": "Guyane",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-LA-REUNION",
-    "countryCode": "FR",
-    "regionCode": "LA-REUNION",
-    "name": "France La Réunion Metro",
-    "cities": [],
-    "center": "La Réunion",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
-  },
-  {
-    "code": "FR-MAYOTTE",
-    "countryCode": "FR",
-    "regionCode": "MAYOTTE",
-    "name": "France Mayotte Metro",
-    "cities": [],
-    "center": "Mayotte",
-    "latitude": 46,
-    "longitude": 2,
-    "radius": 40,
-    "population": 0,
-    "createdAt": "2026-07-06T07:05:58.512Z",
-    "updatedAt": "2026-07-06T07:05:58.512Z"
+    "createdAt": "2026-07-13T09:51:43.902Z",
+    "updatedAt": "2026-07-13T09:51:43.902Z"
   }
 ];
 export default metroAreasData;

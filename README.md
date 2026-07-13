@@ -1,132 +1,117 @@
 # Cool Location Data
 
-Professional global location intelligence library designed for shipping, taxes, checkout, address validation, payments, geolocation and analytics.
+Global location intelligence library for shipping, taxes, checkout, address validation, payments, geolocation, and analytics.
 
-## Goals
+## What This Project Provides
 
-- Script tag support
-- ES6 module support
-- npm package structure
-- REST API support
-- Firebase Hosting + Functions deployment
-- CDN readiness
+- JavaScript helpers for country, region, metro, and search lookups
+- Generated world dataset with country, region, and metro files
+- Browser bundle (`public/location-data.js` and `public/location-data.min.js`)
+- JSON payload (`public/location-data.json`)
+- REST API via Firebase Functions (`functions/index.js`)
+- Documentation UI in `public/docs/index.html`
 
-## Current rollout stage
-
-- Stage 1: Architecture complete
-- Stage 2: Canada implemented
-- Next: US, MX, FR, GB, DE
-
-## Real-time global data mode
-
-- World countries are synced automatically from a live dataset source into `src/data/world.js` and per-country files under `src/data/countries`, `src/data/regions`, and `src/data/metro`.
-- Canada remains curated and overrides generated data for production-grade regional details.
-- Automated sync can run hourly via GitHub Actions schedule.
-- Build output is regenerated after each sync for Hosting/API consistency.
-
-## Project structure
-
-- public/index.html: Main landing and docs entry point
-- public/location-data.js: Browser-ready UMD bundle
-- public/location-data.min.js: Minified bundle
-- public/location-data.json: Full payload JSON
-- public/docs/index.html: Full technical documentation
-- public/assets/flags/countries: Country flags
-- public/assets/flags/regions: Regional flags
-- functions/index.js: Firebase Functions REST API
-- generate-json.js: Build JSON + bundles
-- download-flags.js: Download flags with fallback
-- update-data.js: Data update report and rollout tracking
-- src: Source dataset + helpers API
-
-## Install and use
-
-### npm
+## Install
 
 ```bash
 npm install cool-location-data
 ```
 
+## Quick Start (ESM)
+
 ```js
 import {
   getCountryData,
   getRegion,
-  getShippingZone,
-  getCountryCurrency
+  getCountryLanguages,
+  searchCity
 } from "cool-location-data";
 
 const country = getCountryData("CA");
 const region = getRegion("CA", "QC");
-const shipping = getShippingZone("CA", "QC");
-const currency = getCountryCurrency("CA");
+const languages = getCountryLanguages("CA");
+const cityMatches = searchCity("montreal");
 ```
 
-### Script tag
+## Quick Start (Script Tag)
 
 ```html
 <script src="https://cool-location-data.web.app/location-data.js"></script>
 <script>
   const country = getCountryData("CA");
   const region = getRegion("CA", "QC");
-  const shipping = getShippingZone("CA", "QC");
-  const currency = getCountryCurrency("CA");
+  const cityMatches = searchCity("montreal");
 </script>
 ```
 
-### CDN
+## Region Code Behavior
 
-Once published to npm:
+Region outputs are normalized for display:
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/cool-location-data@1/dist/location-data.min.js"></script>
-```
+- `code`: short code (example: `QC`)
+- `fullCode`: canonical full code (example: `CA-QC`)
 
-or
+This applies to helpers and REST responses for regions.
 
-```html
-<script src="https://unpkg.com/cool-location-data/public/location-data.min.js"></script>
-```
+## Language Behavior
 
-## Helpers implemented
+- Language keys are ISO-style language codes (for example `fra`, `eng`)
+- `/api/languages` returns countries per language
+- French (`fra`) now prioritizes `FR` as reference country
 
-- getAllCountries()
-- getCountryData()
-- getCountryName()
-- getCountryFlag()
-- getCountryCurrency()
-- getCountryLanguages()
-- getCountryPhoneCode()
-- getCountryTimezones()
-- getCountryCapital()
-- getRegions()
-- getRegion()
-- getRegionName()
-- getRegionCode()
-- getMetroAreas()
-- getShippingZone()
-- getTaxZone()
-- getDistanceBetweenRegions()
-- searchCountry()
-- searchRegion()
-- searchCity()
+## Search Behavior
 
-## REST API routes
+Search is accent-insensitive:
 
-- GET /api/countries
-- GET /api/countries/:country
-- GET /api/countries/:country/regions
-- GET /api/countries/:country/regions/:region
-- GET /api/countries/:country/metro
-- GET /api/search
-- GET /api/languages
-- GET /api/currencies
-- GET /api/shipping
-- GET /api/taxes
-- GET /api/timezones
-- GET /api/flags
-- GET /api/version
+- `montreal` matches `Montréal`
+- `quebec` matches `Québec`
 
-## Build scripts
+## JavaScript Helpers
+
+- `getAllCountries()`
+- `getCountryData(countryCodeOrName)`
+- `getCountryName(countryCodeOrName)`
+- `getCountryFlag(countryCodeOrName)`
+- `getCountryCurrency(countryCodeOrName)`
+- `getCountryLanguages(countryCodeOrName)`
+- `getCountryPhoneCode(countryCodeOrName)`
+- `getCountryTimezones(countryCodeOrName)`
+- `getCountryCapital(countryCodeOrName)`
+- `getRegions(countryCodeOrName)`
+- `getRegion(countryCodeOrName, regionCodeOrName)`
+- `getRegionName(countryCodeOrName, regionCodeOrName)`
+- `getRegionCode(countryCodeOrName, regionCodeOrName)`
+- `getMetroAreas(countryCodeOrName, regionCodeOrName)`
+- `getShippingZone(countryCodeOrName, regionCodeOrName)`
+- `getTaxZone(countryCodeOrName, regionCodeOrName)`
+- `getDistanceBetweenRegions(countryCodeOrName, regionA, regionB)`
+- `searchCountry(query)`
+- `searchRegion(query, countryCodeOrName)`
+- `searchCity(query)`
+- `getApiVersion()`
+- `toPayload()`
+
+## REST API
+
+Base path: `/api`
+
+- `GET /api/countries`
+- `GET /api/countries/:country`
+- `GET /api/countries/:country/regions`
+- `GET /api/countries/:country/regions/:region`
+- `GET /api/countries/:country/metro`
+- `GET /api/search?q=montreal`
+- `GET /api/languages`
+- `GET /api/currencies`
+- `GET /api/shipping`
+- `GET /api/taxes`
+- `GET /api/timezones`
+- `GET /api/flags`
+- `GET /api/version`
+- `GET /api/health`
+- `POST /api/admin/refresh` (requires `API_REFRESH_TOKEN`)
+
+## Build And Data Commands
 
 ```bash
 npm run sync:world
@@ -140,23 +125,7 @@ npm run lint
 npm test
 ```
 
-## Automated quality and delivery
-
-- `.github/workflows/ci.yml`
-  - Lint
-  - Build
-  - Tests (helpers + API)
-- `.github/workflows/sync-assets-and-data.yml`
-  - Hourly sync of world data + flags + icons
-  - Auto-commit generated updates
-- `.github/workflows/deploy-firebase.yml`
-  - Deploy Functions + Hosting on push/manual trigger
-
-### Required GitHub secrets
-
-- `FIREBASE_TOKEN` for deploy workflow
-
-## Firebase deployment
+## Firebase Deploy
 
 ```bash
 cd functions
@@ -165,19 +134,9 @@ cd ..
 firebase deploy --only functions,hosting
 ```
 
-API runtime endpoints include:
+## Notes For Beginners
 
-- `GET /api/health`
-- `POST /api/admin/refresh` (requires `API_REFRESH_TOKEN` bearer token)
-
-## Versioning exposure
-
-`window.CoolLocationData` includes:
-
-- version
-- build
-- lastUpdate
-
-## Notes
-
-This repository now provides a scalable architecture for continent-by-continent expansion with stable APIs and independent deployment.
+- Start with `public/docs/index.html` to test requests quickly.
+- Use country code first (example `CA`), then region short code (example `QC`).
+- If you need exact region identity for storage, use `fullCode`.
+- Re-run `npm run build:data` after data syncs to refresh `public/location-data.json`.

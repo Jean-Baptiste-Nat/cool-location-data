@@ -322,7 +322,7 @@
         <main class="content">
             <section id="installation">
                 <h1>Installation</h1>
-                <p>Supporte script tag, ES Modules, npm package, CDN et API REST Firebase.</p>
+                <p>La bibliotheque expose les memes donnees via npm, script tag, CDN et API REST Firebase.</p>
                 <pre><code>npm install cool-location-data</code></pre>
                 <pre><code>&lt;script src="https://cool-location-data.web.app/location-data.js"&gt;&lt;/script&gt;</code></pre>
             </section>
@@ -333,16 +333,17 @@
                 <span class="chip">ESM import</span>
                 <span class="chip">Node.js compatible</span>
                 <pre><code>
-                    import { getCountryData, getRegion, getShippingZone } from "cool-location-data";
-                    const country = getCountryData("CA");
-                    const region = getRegion("CA", "CA-QC");
-                    const shipping = getShippingZone("CA", "CA-QC");
+import { getCountryData, getRegion, getShippingZone } from "cool-location-data";
+
+const country = getCountryData("CA");
+const region = getRegion("CA", "QC");
+const shipping = getShippingZone("CA", "QC");
 </code></pre>
             </section>
 
             <section id="playground">
                 <h2>Test Temps Reel</h2>
-                <p>Saisis une requete puis clique sur Tester pour lancer la recherche realtime.</p>
+                <p>Saisis une requete puis clique sur Tester pour voir les resultats reels de recherche pays, regions et villes.</p>
                 <form class="playground" id="liveTestForm" autocomplete="off">
                     <label>
                         Search Query
@@ -359,22 +360,24 @@
 
             <section id="api">
                 <h2>API REST</h2>
-                <p>Routes disponibles:</p>
+                <p>Routes disponibles et format de retour:</p>
                 <pre><code>
-                    GET /api/countries
-                    GET /api/countries/:country
-                    GET /api/countries/:country/regions
-                    GET /api/countries/:country/regions/:region
-                    GET /api/countries/:country/metro
-                    GET /api/search?q=montreal
-                    GET /api/languages
-                    GET /api/currencies
-                    GET /api/shipping
-                    GET /api/taxes
-                    GET /api/timezones
-                    GET /api/flags
-                    GET /api/version
+GET /api/countries
+GET /api/countries/:country
+GET /api/countries/:country/regions
+GET /api/countries/:country/regions/:region
+GET /api/countries/:country/metro
+GET /api/search?q=montreal
+GET /api/languages
+GET /api/currencies
+GET /api/shipping
+GET /api/taxes
+GET /api/timezones
+GET /api/flags
+GET /api/version
                 </code></pre>
+                <p>L'API renvoie les regions avec <strong>code court</strong> pour l'affichage, par exemple <strong>QC</strong> au lieu de <strong>CA-QC</strong>. Le champ <strong>fullCode</strong> conserve le code complet si tu dois le stocker ou le comparer.</p>
+                <p>Les recherches sont accent-insensibles: <strong>montreal</strong>, <strong>montréal</strong> et <strong>MONTREAL</strong> retournent le meme resultat.</p>
             </section>
 
             <section id="helpers">
@@ -383,11 +386,21 @@
                     getCountryCurrency, getCountryLanguages, getCountryPhoneCode, getCountryTimezones,
                     getCountryCapital, getRegions, getRegion, getRegionName, getRegionCode, getMetroAreas,
                     getShippingZone, getTaxZone, getDistanceBetweenRegions, searchCountry, searchRegion, searchCity.</p>
+                <pre><code>const region = getRegion("CA", "QC");
+// region.code === "QC"
+// region.fullCode === "CA-QC"
+
+const result = getCountryFlag("CA");
+// result.flagUrl -> drapeau du Canada
+
+const cities = searchCity("montreal");
+// retourne Montreal meme si l'accent manque dans la requete
+</code></pre>
             </section>
 
             <section id="shipping">
                 <h2>Shipping, taxes et zones</h2>
-                <p>Chaque pays/region embarque shippingZone, taxZone/taxRegion, timezone, langue principale et metriques
+                <p>Chaque pays et chaque region embarquent shippingZone, taxZone/taxRegion, timezone, langue principale et metriques
                     logistiques pour e-commerce, multi-store et marketplace.</p>
             </section>
 

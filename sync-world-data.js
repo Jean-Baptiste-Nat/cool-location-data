@@ -136,6 +136,23 @@ function uniqueStrings(values) {
   return Array.from(new Set((values || []).map((value) => String(value || "").trim()).filter(Boolean)));
 }
 
+function normalizeMetroCity(value) {
+  if (typeof value === "string") return value.trim();
+  if (value && typeof value === "object") {
+    return String(value.name || value.city || value.label || "").trim();
+  }
+  return String(value || "").trim();
+}
+
+function collectMetroCities(definitions) {
+  return uniqueStrings(
+    (Array.isArray(definitions) ? definitions : []).flatMap((definition) => {
+      if (!definition || typeof definition !== "object") return [];
+      return Array.isArray(definition.cities) ? definition.cities.map(normalizeMetroCity) : [];
+    })
+  );
+}
+
 function extractObjectLiteral(content, variableName) {
   const token = `const ${variableName} =`;
   const tokenIndex = content.indexOf(token);
@@ -247,6 +264,22 @@ function buildRegionsAndMetro(countries, nowIso, legacy) {
   const regions = {};
   const metroAreas = {};
 
+  const canadaRegionProfiles = {
+    AB: { latitude: 53.9333, longitude: -116.5765, shippingZone: "NA-CA-WEST", taxRegion: "NA-CA-WEST" },
+    BC: { latitude: 53.7267, longitude: -127.6476, shippingZone: "NA-CA-WEST", taxRegion: "NA-CA-WEST" },
+    MB: { latitude: 53.7609, longitude: -98.8139, shippingZone: "NA-CA-CENTRAL", taxRegion: "NA-CA-CENTRAL" },
+    NB: { latitude: 46.5653, longitude: -66.4619, shippingZone: "NA-CA-EAST", taxRegion: "NA-CA-EAST" },
+    NL: { latitude: 53.1355, longitude: -57.6604, shippingZone: "NA-CA-EAST", taxRegion: "NA-CA-EAST" },
+    NS: { latitude: 44.682, longitude: -63.7443, shippingZone: "NA-CA-EAST", taxRegion: "NA-CA-EAST" },
+    NT: { latitude: 64.8255, longitude: -124.8457, shippingZone: "NA-CA-NORTH", taxRegion: "NA-CA-NORTH" },
+    NU: { latitude: 70.2998, longitude: -83.1076, shippingZone: "NA-CA-NORTH", taxRegion: "NA-CA-NORTH" },
+    ON: { latitude: 51.2538, longitude: -85.3232, shippingZone: "NA-CA-CENTRAL", taxRegion: "NA-CA-CENTRAL" },
+    PE: { latitude: 46.5107, longitude: -63.4168, shippingZone: "NA-CA-EAST", taxRegion: "NA-CA-EAST" },
+    QC: { latitude: 52.9399, longitude: -73.5491, shippingZone: "NA-CA-EAST", taxRegion: "NA-CA-EAST" },
+    SK: { latitude: 52.9399, longitude: -106.4509, shippingZone: "NA-CA-CENTRAL", taxRegion: "NA-CA-CENTRAL" },
+    YT: { latitude: 64.2823, longitude: -135.0, shippingZone: "NA-CA-NORTH", taxRegion: "NA-CA-NORTH" }
+  };
+
   countries.forEach((country) => {
     const regionNames = Array.isArray(legacy?.regionsByCountry?.[country.code])
       ? legacy.regionsByCountry[country.code]
@@ -259,18 +292,24 @@ function buildRegionsAndMetro(countries, nowIso, legacy) {
       const code = String(regionCodes[regionName] || slugifyRegion(regionName));
       const type = index < 3 ? "state" : index < 6 ? "province" : "region";
       const normalizedName = String(regionName).trim();
+      const regionSuffix = code.includes("-") ? code.split("-").pop() : code;
+      const canadaProfile = country.code === "CA" ? canadaRegionProfiles[regionSuffix] || null : null;
+      const regionLatitude = canadaProfile ? canadaProfile.latitude : country.latitude;
+      const regionLongitude = canadaProfile ? canadaProfile.longitude : country.longitude;
+      const shippingZone = canadaProfile ? canadaProfile.shippingZone : `${country.shippingZone}-${code}`;
+      const taxRegion = canadaProfile ? canadaProfile.taxRegion : `${country.taxZone}-${code}`;
       const region = {
         code,
         countryCode: country.code,
         name: normalizedName,
         type,
-        shippingZone: `${country.shippingZone}-${code}`,
-        taxRegion: `${country.taxZone}-${code}`,
+        shippingZone,
+        taxRegion,
         timezone: Array.isArray(country.timezones) && country.timezones.length ? country.timezones[0] : "UTC",
         flagUrl: `/assets/flags/regions/${code.toLowerCase()}.png`,
         flagRemoteUrl: `https://flagcdn.com/w320/${code.toLowerCase()}.png`,
-        latitude: country.latitude,
-        longitude: country.longitude,
+        latitude: regionLatitude,
+        longitude: regionLongitude,
         population: Math.max(0, Math.round(country.population / Math.max(regionNames.length, 1))),
         area: Math.max(0, Math.round(country.area / Math.max(regionNames.length, 1))),
         isRemoteArea: /island|territory|archipelago|nunavut|yukon|alaska|northwest territories|greenland/i.test(normalizedName),
@@ -281,24 +320,31 @@ function buildRegionsAndMetro(countries, nowIso, legacy) {
 
       regionRows.push(region);
 
-      const cityEntries = legacy?.metroAreasByCountryRegion?.[country.code]?.[regionName] || [];
-      const cities = uniqueStrings(cityEntries);
-      const metro = {
-        code: `${country.code}-${code}`,
-        countryCode: country.code,
-        regionCode: code,
-        name: `${country.name} ${normalizedName} Metro`,
-        cities,
-        center: cities[0] || normalizedName,
-        latitude: Number(country.latitude || 0),
-        longitude: Number(country.longitude || 0),
-        radius: 40,
-        population: Math.round(country.population / Math.max(regionNames.length || 1, 1)),
-        createdAt: nowIso,
-        updatedAt: nowIso
-      };
+      const metroDefinitions = Array.isArray(legacy?.metroAreasByCountryRegion?.[country.code]?.[regionName])
+        ? legacy.metroAreasByCountryRegion[country.code][regionName]
+        : [];
 
-      metros.push(metro);
+      if (metroDefinitions.length) {
+        metroDefinitions.forEach((definition, metroIndex) => {
+          const cities = collectMetroCities([definition]);
+          const metro = {
+            code: String(definition?.code || `${country.code}-${code}-${metroIndex + 1}`).trim(),
+            countryCode: country.code,
+            regionCode: code,
+            name: String(definition?.name || `${country.name} ${normalizedName} Metro`).trim(),
+            cities,
+            center: String(definition?.center || cities[0] || normalizedName).trim(),
+            latitude: regionLatitude,
+            longitude: regionLongitude,
+            radius: Number(definition?.radius || 40),
+            population: Math.round(country.population / Math.max(metroDefinitions.length || 1, 1)),
+            createdAt: nowIso,
+            updatedAt: nowIso
+          };
+
+          metros.push(metro);
+        });
+      }
     });
 
     regions[country.code] = regionRows;

@@ -9,7 +9,11 @@ function normalizeCode(value) {
 }
 
 function normalizeSearch(value) {
-  return String(value || "").trim().toLowerCase();
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
 }
 
 function regionList(countryCode) {
@@ -18,6 +22,33 @@ function regionList(countryCode) {
 
 function metroList(countryCode) {
   return metroAreas[normalizeCode(countryCode)] || [];
+}
+
+function regionDisplayCode(regionCode) {
+  const normalized = normalizeCode(regionCode);
+  if (!normalized) return null;
+
+  const parts = normalized.split("-");
+  return parts[parts.length - 1];
+}
+
+function formatRegion(region) {
+  if (!region) return null;
+
+  return {
+    ...region,
+    fullCode: region.code,
+    code: regionDisplayCode(region.code)
+  };
+}
+
+function formatMetroArea(metro) {
+  if (!metro) return null;
+
+  return {
+    ...metro,
+    regionCode: regionDisplayCode(metro.regionCode)
+  };
 }
 
 function findCountry(countryCodeOrName) {
@@ -138,13 +169,13 @@ export function getCountryCapital(countryCodeOrName) {
 export function getRegions(countryCodeOrName) {
   const country = findCountry(countryCodeOrName);
   if (!country) return [];
-  return [...regionList(country.code)];
+  return regionList(country.code).map(formatRegion);
 }
 
 export function getRegion(countryCodeOrName, regionCodeOrName) {
   const country = findCountry(countryCodeOrName);
   if (!country) return null;
-  return findRegion(country.code, regionCodeOrName);
+  return formatRegion(findRegion(country.code, regionCodeOrName));
 }
 
 export function getRegionName(countryCodeOrName, regionCodeOrName) {
@@ -162,12 +193,12 @@ export function getMetroAreas(countryCodeOrName, regionCodeOrName = null) {
   if (!country) return [];
 
   const list = metroList(country.code);
-  if (!regionCodeOrName) return [...list];
+  if (!regionCodeOrName) return list.map(formatMetroArea);
 
   const region = findRegion(country.code, regionCodeOrName);
   if (!region) return [];
 
-  return list.filter((metro) => metro.regionCode === region.code);
+  return list.filter((metro) => metro.regionCode === region.code).map(formatMetroArea);
 }
 
 export function getShippingZone(countryCodeOrName, regionCodeOrName = null) {
@@ -203,8 +234,10 @@ export function getDistanceBetweenRegions(
   if (!regionA || !regionB) return null;
 
   return {
-    from: regionA.code,
-    to: regionB.code,
+    from: regionDisplayCode(regionA.code),
+    to: regionDisplayCode(regionB.code),
+    fromFullCode: regionA.code,
+    toFullCode: regionB.code,
     distanceKm: Number(
       haversineDistanceKm(
         regionA.latitude,
@@ -237,15 +270,17 @@ export function searchRegion(query, countryCodeOrName = null) {
   if (countryCodeOrName) {
     const country = findCountry(countryCodeOrName);
     if (!country) return [];
-    return regionList(country.code).filter((region) =>
-      region.name.toLowerCase().includes(search) || region.code.toLowerCase().includes(search)
-    );
+    return regionList(country.code)
+      .filter((region) => region.name.toLowerCase().includes(search) || region.code.toLowerCase().includes(search))
+      .map(formatRegion);
   }
 
   return Object.keys(regions).flatMap((code) => {
-    return regionList(code).filter((region) => {
-      return region.name.toLowerCase().includes(search) || region.code.toLowerCase().includes(search);
-    });
+    return regionList(code)
+      .filter((region) => {
+        return region.name.toLowerCase().includes(search) || region.code.toLowerCase().includes(search);
+      })
+      .map(formatRegion);
   });
 }
 
@@ -256,13 +291,13 @@ export function searchCity(query) {
   return Object.keys(metroAreas).flatMap((countryCode) => {
     return metroList(countryCode).flatMap((metro) => {
       return metro.cities
-        .filter((city) => city.toLowerCase().includes(search))
+        .filter((city) => normalizeSearch(city).includes(search))
         .map((city) => ({
           city,
           metroCode: metro.code,
           metroName: metro.name,
           countryCode: metro.countryCode,
-          regionCode: metro.regionCode
+          regionCode: regionDisplayCode(metro.regionCode)
         }));
     });
   });

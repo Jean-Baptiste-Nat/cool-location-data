@@ -10,6 +10,14 @@ function normalize(value) {
   return String(value || "").trim().toUpperCase();
 }
 
+function normalizeSearch(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
 function findCountry(input) {
   const query = String(input || "").trim().toLowerCase();
   if (!query) return null;
@@ -42,6 +50,37 @@ function findRegion(countryCode, regionValue) {
   );
 }
 
+function regionDisplayCode(regionCode) {
+  const normalized = String(regionCode || "").trim().toUpperCase();
+  if (!normalized) return null;
+
+  const parts = normalized.split("-");
+  return parts[parts.length - 1];
+}
+
+function formatRegion(region) {
+  if (!region) return null;
+
+  return {
+    ...region,
+    fullCode: region.code,
+    code: regionDisplayCode(region.code)
+  };
+}
+
+function formatMetroArea(metro) {
+  if (!metro) return null;
+
+  return {
+    ...metro,
+    regionCode: regionDisplayCode(metro.regionCode)
+  };
+}
+
+const preferredLanguageCountryCodes = {
+  fra: "FR"
+};
+
 let lastRuntimeRefresh = new Date().toISOString();
 
 app.get("/api/countries", (_req, res) => {
@@ -57,7 +96,7 @@ app.get("/api/countries/:country", (req, res) => {
 app.get("/api/countries/:country/regions", (req, res) => {
   const country = findCountry(req.params.country);
   if (!country) return res.status(404).json({ error: "Country not found" });
-  return res.json(data.regions[country.code] || []);
+  return res.json((data.regions[country.code] || []).map(formatRegion));
 });
 
 app.get("/api/countries/:country/regions/:region", (req, res) => {
@@ -66,7 +105,7 @@ app.get("/api/countries/:country/regions/:region", (req, res) => {
 
   const region = findRegion(country.code, req.params.region);
   if (!region) return res.status(404).json({ error: "Region not found" });
-  return res.json(region);
+  return res.json(formatRegion(region));
 });
 
 app.get("/api/countries/:country/metro", (req, res) => {
@@ -74,38 +113,40 @@ app.get("/api/countries/:country/metro", (req, res) => {
   if (!country) return res.status(404).json({ error: "Country not found" });
 
   const list = data.metroAreas[country.code] || [];
-  return res.json(list);
+  return res.json(list.map(formatMetroArea));
 });
 
 app.get("/api/search", (req, res) => {
-  const query = String(req.query.q || "").trim().toLowerCase();
+  const query = normalizeSearch(req.query.q);
   if (!query) return res.json({ countries: [], regions: [], cities: [] });
 
   const countries = data.countries.filter((country) => {
     return (
-      country.code.toLowerCase().includes(query) ||
-      country.code3.toLowerCase().includes(query) ||
-      country.name.toLowerCase().includes(query) ||
-      country.officialName.toLowerCase().includes(query)
+      normalizeSearch(country.code).includes(query) ||
+      normalizeSearch(country.code3).includes(query) ||
+      normalizeSearch(country.name).includes(query) ||
+      normalizeSearch(country.officialName).includes(query)
     );
   });
 
   const regions = Object.keys(data.regions).flatMap((countryCode) => {
-    return data.regions[countryCode].filter((region) => {
-      return region.name.toLowerCase().includes(query) || region.code.toLowerCase().includes(query);
-    });
+    return data.regions[countryCode]
+      .filter((region) => {
+        return normalizeSearch(region.name).includes(query) || normalizeSearch(region.code).includes(query);
+      })
+      .map(formatRegion);
   });
 
   const cities = Object.keys(data.metroAreas).flatMap((countryCode) => {
     return data.metroAreas[countryCode].flatMap((metro) => {
       return metro.cities
-        .filter((city) => city.toLowerCase().includes(query))
+        .filter((city) => normalizeSearch(city).includes(query))
         .map((city) => ({
           city,
           metroCode: metro.code,
           metroName: metro.name,
           countryCode: metro.countryCode,
-          regionCode: metro.regionCode
+          regionCode: regionDisplayCode(metro.regionCode)
         }));
     });
   });
@@ -118,10 +159,33 @@ app.get("/api/languages", (_req, res) => {
   data.countries.forEach((country) => {
     country.languages.forEach((lang) => {
       if (!map.has(lang)) map.set(lang, []);
-      map.get(lang).push(country.code);
+      map.get(lang).push({
+        code: country.code,
+        primary: country.primaryLanguage === lang
+      });
     });
   });
-  res.json(Object.fromEntries(map.entries()));
+
+  const result = Object.fromEntries(
+    Array.from(map.entries()).map(([lang, countries]) => {
+      const preferredCode = preferredLanguageCountryCodes[lang];
+      const sorted = countries
+        .slice()
+        .sort((a, b) => {
+          if (preferredCode) {
+            if (a.code === preferredCode && b.code !== preferredCode) return -1;
+            if (b.code === preferredCode && a.code !== preferredCode) return 1;
+          }
+          if (a.primary !== b.primary) return a.primary ? -1 : 1;
+          return a.code.localeCompare(b.code);
+        })
+        .map((item) => item.code);
+
+      return [lang, sorted];
+    })
+  );
+
+  res.json(result);
 });
 
 app.get("/api/currencies", (_req, res) => {
